@@ -5,8 +5,8 @@
 // ============================================================
 
 export const profile = {
-  name: "Nama Anda",
-  initials: "NA",
+  name: "Dwi Wahyu Bintarto Prasetyo, S.Kom",
+  initials: "DW",
   role: "Web Developer",
   tagline:
     "Saya membangun website yang cepat, rapi, dan nyaman dipakai — dari desain hingga deploy.",
@@ -14,7 +14,7 @@ export const profile = {
   email: "nama@email.com",
   focus: ["UI rapi", "Performa", "Aksesibilitas"],
   about: [
-    "Halo! Saya Nama Anda, seorang web developer yang senang mengubah ide menjadi produk digital yang nyata. Fokus saya adalah membangun antarmuka yang bersih, responsif, dan mudah digunakan oleh siapa pun.",
+    "Halo! Saya Dwi Wahyu Bintarto Prasetyo, seorang web developer yang senang mengubah ide menjadi produk digital yang nyata. Fokus saya adalah membangun antarmuka yang bersih, responsif, dan mudah digunakan oleh siapa pun.",
     "Saat ini saya terus memperdalam React, Tailwind CSS, dan ekosistem JavaScript modern. Di luar coding, saya suka mengeksplorasi desain, membaca artikel teknologi, dan mengerjakan proyek sampingan.",
   ],
   socials: [
