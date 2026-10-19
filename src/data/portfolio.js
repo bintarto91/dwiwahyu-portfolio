@@ -11,16 +11,17 @@ export const profile = {
   tagline:
     "Saya membangun website yang cepat, rapi, dan nyaman dipakai — dari desain hingga deploy.",
   location: "Jakarta, Indonesia",
-  email: "nama@email.com",
+  email: "dwahyu47@gmail.com",
   focus: ["UI rapi", "Performa", "Aksesibilitas"],
   about: [
     "Halo! Saya Dwi Wahyu Bintarto Prasetyo, seorang web developer yang senang mengubah ide menjadi produk digital yang nyata. Fokus saya adalah membangun antarmuka yang bersih, responsif, dan mudah digunakan oleh siapa pun.",
     "Saat ini saya terus memperdalam React, Tailwind CSS, dan ekosistem JavaScript modern. Di luar coding, saya suka mengeksplorasi desain, membaca artikel teknologi, dan mengerjakan proyek sampingan.",
   ],
   socials: [
-    { label: "GitHub", url: "https://github.com/usernameanda" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/usernameanda" },
-    { label: "Instagram", url: "https://www.instagram.com/usernameanda" },
+    { label: "GitHub", url: "https://github.com/bintarto91" },
+    // Kirim link-nya kalau sudah ada, nanti ditambahkan:
+    // { label: "LinkedIn", url: "https://www.linkedin.com/in/..." },
+    // { label: "Instagram", url: "https://www.instagram.com/..." },
   ],
 };
 
