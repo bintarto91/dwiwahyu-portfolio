@@ -19,8 +19,11 @@ export const profile = {
   ],
   socials: [
     { label: "GitHub", url: "https://github.com/bintarto91" },
+    {
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/dwi-wahyu-bintarto-prasetyo/",
+    },
     // Kirim link-nya kalau sudah ada, nanti ditambahkan:
-    // { label: "LinkedIn", url: "https://www.linkedin.com/in/..." },
     // { label: "Instagram", url: "https://www.instagram.com/..." },
   ],
 };
@@ -133,10 +136,10 @@ export const projects = [
   },
   {
     category: "Kantor",
-    title: "Aplikasi ERP KB/GB & Non-KB/GB",
+    title: "Aplikasi ERP Kawasan & Gudang Berikat",
     description:
-      "Aplikasi berbasis ERP untuk pengelolaan layanan program KB/GB dan non-KB/GB.",
-    tags: ["ERP", "Enterprise"],
+      "Aplikasi berbasis ERP untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat (fasilitas kepabeanan), mencakup pula perusahaan non-KB/GB.",
+    tags: ["ERP", "Kawasan Berikat", "Logistik"],
     emoji: "🏢",
     demo: "#",
     repo: "#",
