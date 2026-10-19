@@ -36,7 +36,7 @@ export const navLinks = [
 export const stats = [
   { value: "11+", label: "Tahun Pengalaman IT" },
   { value: "3", label: "Perusahaan Tempat Berkarier" },
-  { value: "7+", label: "Proyek Dikerjakan" },
+  { value: "9+", label: "Proyek Dikerjakan" },
 ];
 
 // Riwayat karier, urut dari yang terbaru.
@@ -112,6 +112,26 @@ export const projects = [
     repo: "https://github.com/bintarto91/RW05",
   },
   {
+    category: "Pribadi",
+    title: "Aplikasi Laundry",
+    description:
+      "Aplikasi manajemen layanan laundry — pencatatan pesanan, status cucian, dan data pelanggan.",
+    tags: ["Web App"],
+    emoji: "🧺",
+    demo: "#",
+    repo: "https://github.com/bintarto91/laundry",
+  },
+  {
+    category: "Pribadi",
+    title: "Revamp Loccana",
+    description:
+      "Pembaruan tampilan (revamp) website Loccana — berfokus pada desain dan antarmuka.",
+    tags: ["CSS", "Web Design"],
+    emoji: "🎨",
+    demo: "#",
+    repo: "https://github.com/bintarto91/revamp",
+  },
+  {
     category: "Kantor",
     title: "Aplikasi ERP KB/GB & Non-KB/GB",
     description:
@@ -165,9 +185,18 @@ export const skillGroups = [
     skills: ["ERP", "SIMRS", "Data Center", "Troubleshooting"],
   },
   {
-    title: "Web Development",
+    title: "Web & Mobile",
     emoji: "🌐",
-    skills: ["HTML", "CSS", "JavaScript", "PHP", "Laravel", "Git & GitHub"],
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "Laravel",
+      "Java (pemula)",
+      "Android (pemula)",
+      "Git & GitHub",
+    ],
   },
 ];
 
