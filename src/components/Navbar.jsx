@@ -30,10 +30,10 @@ export default function Navbar() {
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-linear-to-br from-accent to-accent-2 text-sm font-bold text-zinc-950">
             {profile.initials}
           </span>
-          <span className="hidden sm:block">{profile.name}</span>
+          <span className="hidden whitespace-nowrap lg:block">{profile.name}</span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 md:flex lg:gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={`mailto:${profile.email}`}
-            className="hidden rounded-full border border-accent/40 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10 md:inline-block"
+            className="hidden whitespace-nowrap rounded-full border border-accent/40 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10 md:inline-block"
           >
             Hubungi Saya
           </a>
