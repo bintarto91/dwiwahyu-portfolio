@@ -28,6 +28,9 @@ export default function Experience() {
                   </h3>
                   <p className="mt-0.5 text-sm font-medium text-accent">
                     {item.company}
+                    {item.location ? (
+                      <span className="text-zinc-500"> · {item.location}</span>
+                    ) : null}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-zinc-400">
                     {item.description}

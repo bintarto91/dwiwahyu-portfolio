@@ -7,15 +7,15 @@
 export const profile = {
   name: "Dwi Wahyu Bintarto Prasetyo, S.Kom",
   initials: "DW",
-  role: "Project Leader",
+  role: "Database Developer & Project Lead",
   tagline:
-    "Perjalanan saya di dunia IT mencakup analisis sistem, dukungan teknis, data, dan database — kini memimpin proyek sambil terus belajar dan membantu pengembangan frontend & backend.",
-  location: "Jakarta, Indonesia",
+    "Profesional IT dengan pengalaman lebih dari 11 tahun, berfokus pada arsitektur data — kini memimpin proyek sambil terus belajar dan membantu pengembangan frontend & backend.",
+  location: "Bandung, Indonesia",
   email: "dwahyu47@gmail.com",
-  focus: ["Database", "Project Management", "Frontend & Backend"],
+  focus: ["Arsitektur Data", "Project Lead", "FE & BE"],
   about: [
-    "Halo! Saya Dwi — perjalanan karier saya di dunia IT dimulai sebagai system analyst, lalu berlanjut ke IT support, staff data, PIC database, dan database administrator (DBA). Saat ini saya dipercaya memimpin proyek sebagai project leader.",
-    "Meski latar belakang saya kuat di data dan database, saya aktif belajar dan turun tangan membantu pengembangan frontend dan backend. Bagi saya, cara terbaik berkembang di IT adalah terus mau mencoba hal baru.",
+    "Halo! Saya Dwi — profesional IT dengan pengalaman lebih dari 11 tahun. Perjalanan karier saya dimulai sebagai system analyst, berlanjut ke IT support, data center, dan PIC database, hingga kini sebagai database developer sekaligus project lead.",
+    "Sehari-hari saya banyak berkutat dengan sistem layanan kesehatan: SIMRS, aplikasi berbasis ERP, aplikasi keperawatan, hingga telemedicine. Berfokus pada arsitektur data, saya juga memimpin jalannya proyek dan turut membantu pengembangan frontend & backend.",
   ],
   socials: [
     { label: "GitHub", url: "https://github.com/bintarto91" },
@@ -34,116 +34,110 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: "2+", label: "Tahun Belajar & Berkarya" },
-  { value: "12+", label: "Proyek Selesai" },
-  { value: "5+", label: "Teknologi Dikuasai" },
+  { value: "11+", label: "Tahun Pengalaman IT" },
+  { value: "3", label: "Perusahaan Tempat Berkarier" },
+  { value: "7+", label: "Proyek Dikerjakan" },
 ];
 
 // Riwayat karier, urut dari yang terbaru.
-// Nama perusahaan & periode akan diisi setelah Anda mengirim datanya.
 export const experiences = [
   {
-    period: "Saat ini",
-    role: "Project Leader",
-    company: "Nama Perusahaan",
+    period: "Jul 2018 – Sekarang",
+    role: "Database Developer & Project Lead",
+    company: "PT Swamedia Informatika",
+    location: "Bandung · Hybrid",
     description:
-      "Memimpin jalannya proyek — dari perencanaan, koordinasi tim, hingga rilis. Turut membantu pengembangan frontend dan backend.",
-    tags: ["Leadership", "Koordinasi Tim"],
+      "Menangani arsitektur dan pengelolaan database sekaligus memimpin jalannya proyek — dari perencanaan, koordinasi tim, hingga rilis, serta turut membantu pengembangan frontend & backend.",
+    tags: ["Database", "Project Lead", "FE & BE"],
   },
   {
-    period: "20xx – 20xx",
-    role: "Database Administrator (DBA)",
-    company: "Nama Perusahaan",
+    period: "Jan 2015 – Jul 2018",
+    role: "Staff IT, Data Center & PIC Database",
+    company: "PT Tirta Utama Abadi",
+    location: "Bandung · Hybrid",
     description:
-      "Mengelola dan memelihara database perusahaan: desain, backup, hingga menjaga performa tetap optimal.",
-    tags: ["Database", "Backup & Recovery"],
+      "Mengoptimalkan keandalan infrastruktur IT perusahaan melalui pemantauan sistem proaktif, sekaligus menjadi penanggung jawab database.",
+    tags: ["Infrastruktur IT", "Data Center", "Database"],
   },
   {
-    period: "20xx – 20xx",
-    role: "PIC Database",
-    company: "Nama Perusahaan",
-    description:
-      "Penanggung jawab utama database — memastikan data selalu tersedia, aman, dan konsisten untuk kebutuhan operasional.",
-    tags: ["Database", "Operasional"],
-  },
-  {
-    period: "20xx – 20xx",
-    role: "Staff Data",
-    company: "Nama Perusahaan",
-    description:
-      "Mengolah dan menyiapkan data untuk kebutuhan operasional perusahaan serta laporan.",
-    tags: ["Pengolahan Data", "Laporan"],
-  },
-  {
-    period: "20xx – 20xx",
-    role: "IT Support",
-    company: "Nama Perusahaan",
-    description:
-      "Dukungan teknis harian untuk pengguna: perangkat, software, dan jaringan.",
-    tags: ["Troubleshooting", "Helpdesk"],
-  },
-  {
-    period: "20xx",
+    period: "Feb 2014 – Agu 2014",
     role: "System Analyst",
-    company: "Nama Perusahaan",
+    company: "Jasamedika Saranatama",
+    location: "Bandung · On-site",
     description:
-      "Menganalisis kebutuhan sistem dan menerjemahkannya menjadi solusi teknis yang tepat.",
-    tags: ["Analisis Sistem", "Dokumentasi"],
+      "Menerjemahkan kebutuhan bisnis yang kompleks menjadi spesifikasi teknis, serta menjalankan operasional site aplikasi SIMRS.",
+    tags: ["Analisis Sistem", "SIMRS"],
   },
 ];
 
 export const projects = [
   {
-    title: "Web Toko Online",
+    category: "Pribadi",
+    title: "NersCare ICU",
     description:
-      "Katalog produk dengan keranjang belanja, filter kategori, dan halaman checkout sederhana.",
-    tags: ["React", "Tailwind", "Vite"],
-    emoji: "🛍️",
+      "Aplikasi asuhan keperawatan untuk unit ICU — membantu perawat mencatat dan memantau kondisi pasien secara terstruktur.",
+    tags: ["Aplikasi Kesehatan", "Web App"],
+    emoji: "🏥",
     demo: "#",
     repo: "#",
   },
   {
-    title: "Aplikasi Catatan",
+    category: "Pribadi",
+    title: "SDEW Screening Risk",
     description:
-      "To-do list dengan penyimpanan lokal, pencarian cepat, dan mode gelap. Fokus pada UX yang minim distraksi.",
-    tags: ["React", "LocalStorage"],
-    emoji: "📝",
+      "Aplikasi skrining risiko kesehatan untuk membantu deteksi dini faktor risiko pasien.",
+    tags: ["Aplikasi Kesehatan", "Skrining"],
+    emoji: "🩺",
     demo: "#",
     repo: "#",
   },
   {
-    title: "Dashboard Cuaca",
+    category: "Pribadi",
+    title: "TNC Teleheart Nursing Care",
     description:
-      "Prakiraan cuaca dari API publik, lengkap dengan grafik suhu dan pencarian kota favorit.",
-    tags: ["JavaScript", "REST API"],
-    emoji: "🌤️",
+      "Platform layanan teleheart nursing care — menghubungkan perawat dan pasien secara digital untuk pemantauan jarak jauh.",
+    tags: ["Telehealth", "Web App"],
+    emoji: "❤️",
     demo: "#",
     repo: "#",
   },
   {
-    title: "Landing Page Produk",
+    category: "Pribadi",
+    title: "Web Rukun Warga",
     description:
-      "Halaman promosi responsif dengan animasi scroll, bagian testimoni, dan formulir kontak.",
-    tags: ["HTML", "Tailwind"],
-    emoji: "🚀",
+      "Website untuk kebutuhan administrasi dan informasi lingkungan Rukun Warga.",
+    tags: ["Website", "Komunitas"],
+    emoji: "🏘️",
     demo: "#",
     repo: "#",
   },
   {
-    title: "Kalkulator Keuangan",
+    category: "Kantor",
+    title: "Aplikasi ERP KB/GB & Non-KB/GB",
     description:
-      "Simulasi cicilan dan tabungan dengan visualisasi hasil secara real-time.",
-    tags: ["React", "Chart"],
-    emoji: "💰",
+      "Aplikasi berbasis ERP untuk pengelolaan layanan program KB/GB dan non-KB/GB.",
+    tags: ["ERP", "Enterprise"],
+    emoji: "🏢",
     demo: "#",
     repo: "#",
   },
   {
-    title: "Blog Pribadi",
+    category: "Kantor",
+    title: "Aplikasi Distribusi & Inventory",
     description:
-      "Blog statis dengan artikel markdown, kategori, dan pencarian. Latihan struktur konten yang rapi.",
-    tags: ["Next.js", "Markdown"],
-    emoji: "✍️",
+      "Sistem distribusi dan inventory untuk mengelola stok serta alur barang secara terpusat.",
+    tags: ["Inventory", "Distribusi"],
+    emoji: "📦",
+    demo: "#",
+    repo: "#",
+  },
+  {
+    category: "Kantor",
+    title: "Operator Site Aplikasi SIMRS",
+    description:
+      "Menjalankan dan mendampingi operasional aplikasi SIMRS (Sistem Informasi Manajemen Rumah Sakit).",
+    tags: ["SIMRS", "System Analyst"],
+    emoji: "🖥️",
     demo: "#",
     repo: "#",
   },
@@ -153,17 +147,27 @@ export const skillGroups = [
   {
     title: "Data & Database",
     emoji: "🗄️",
-    skills: ["SQL", "Desain Database", "Backup & Recovery", "Pengelolaan Data"],
+    skills: ["SQL", "Desain Database", "Arsitektur Data", "Backup & Recovery"],
   },
   {
-    title: "Manajemen & Tools",
+    title: "Kepemimpinan & Analisis",
     emoji: "🧭",
-    skills: ["Project Management", "Koordinasi Tim", "Git & GitHub"],
+    skills: [
+      "Project Lead",
+      "Koordinasi Tim",
+      "Analisis Kebutuhan Bisnis",
+      "Dokumentasi",
+    ],
+  },
+  {
+    title: "Aplikasi & Infrastruktur",
+    emoji: "🖥️",
+    skills: ["ERP", "SIMRS", "Data Center", "Troubleshooting"],
   },
   {
     title: "Web Development",
     emoji: "🌐",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Git & GitHub"],
   },
 ];
 

@@ -12,7 +12,7 @@ export default function Skills() {
           description="Teknologi yang saya gunakan sehari-hari, plus yang sedang saya pelajari."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {skillGroups.map((group, index) => (
             <Reveal key={group.title} delay={index * 120} className="h-full">
               <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6">

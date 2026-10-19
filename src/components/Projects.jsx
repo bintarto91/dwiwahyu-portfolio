@@ -24,8 +24,8 @@ export default function Projects() {
                   <span className="grid h-12 w-12 place-items-center rounded-xl border border-white/10 bg-linear-to-br from-accent/15 to-accent-2/15 text-2xl">
                     {project.emoji}
                   </span>
-                  <span className="text-xs text-zinc-600">
-                    {String(index + 1).padStart(2, "0")}
+                  <span className="rounded-full border border-white/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-zinc-500">
+                    {project.category}
                   </span>
                 </div>
 
