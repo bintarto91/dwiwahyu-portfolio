@@ -33,13 +33,24 @@ export default function About() {
 
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-2xl shadow-accent/10">
                 {fotoTampil ? (
-                  <img
-                    src={profile.photo}
-                    alt={`Foto ${profile.name}`}
-                    decoding="async"
-                    className="aspect-[4/5] w-full object-cover"
-                    onError={() => setFotoTampil(false)}
-                  />
+                  <>
+                    <img
+                      src={profile.photo}
+                      alt={`Foto ${profile.name}`}
+                      decoding="async"
+                      className="aspect-[4/5] w-full object-cover"
+                      onError={() => setFotoTampil(false)}
+                    />
+                    {/* sentuhan halus supaya foto menyatu dengan tema gelap */}
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-linear-to-t from-zinc-950/40 via-transparent to-transparent"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/10 ring-inset"
+                    />
+                  </>
                 ) : (
                   <div className="grid aspect-[4/5] w-full place-items-center bg-linear-to-br from-accent/15 via-zinc-900 to-accent-2/10">
                     <div className="px-6 text-center">
