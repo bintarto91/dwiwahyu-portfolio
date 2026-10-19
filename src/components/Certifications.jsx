@@ -1,50 +1,53 @@
-import { certifications } from "../data/portfolio";
+import { certifications, education } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function Certifications() {
-  if (!certifications.length) return null;
-
   return (
-    <section id="sertifikasi" className="scroll-mt-24 py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="pendidikan" className="scroll-mt-20 bg-ink py-24 text-cream sm:py-32">
+      <div className="section-shell">
         <SectionHeading
-          eyebrow="Sertifikasi"
-          title="Bukti keahlian formal"
-          description="Sertifikasi dan pelatihan yang mendukung praktik kerja sehari-hari."
+          eyebrow="06 / Pendidikan & Sertifikasi"
+          title="Fondasi akademik, terus diperkuat praktik."
+          description="Pendidikan formal serta pelatihan utama yang mendukung pengembangan sistem, analisis data, dan kepemimpinan teknis."
+          light
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((cert, index) => (
-            <Reveal key={cert.name} delay={(index % 3) * 100} className="h-full">
-              <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:bg-white/[0.05]">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex-1">
-                    <h3 className="font-display text-lg font-bold text-white">{cert.name}</h3>
-                    <p className="mt-1 text-sm text-sky-400">{cert.issuer}</p>
-                    <p className="mt-1 text-sm text-zinc-500">{cert.year}</p>
-                    {cert.credentialId && (
-                      <p className="mt-1 text-xs text-zinc-600 font-mono">ID: {cert.credentialId}</p>
-                    )}
+        <div className="mt-16 grid gap-8 lg:grid-cols-[.8fr_1.2fr]">
+          <div>
+            <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Pendidikan</p>
+            {education.map((item) => (
+              <Reveal key={item.degree} className="mt-5">
+                <article className="rounded-[1.75rem] border border-white/15 bg-white/[.04] p-7 sm:p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime font-display text-lg font-bold text-ink" aria-hidden="true">S1</div>
+                  <h3 className="mt-7 font-display text-3xl font-semibold leading-tight">{item.degree}</h3>
+                  <p className="mt-3 font-semibold text-lime">{item.institution}</p>
+                  <div className="mt-7 flex flex-wrap gap-2">
+                    <span className="rounded-full border border-white/15 px-3 py-1.5 font-mono text-[11px] text-cream/60">{item.period}</span>
+                    <span className="rounded-full border border-white/15 px-3 py-1.5 font-mono text-[11px] text-cream/60">{item.detail}</span>
                   </div>
-                  <span className="shrink-0 grid h-12 w-12 place-items-center rounded-xl border border-white/10 bg-linear-to-br from-accent/15 to-accent-2/15 text-2xl">
-                    🏅
-                  </span>
-                </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
 
-                {cert.url && (
-                  <a
-                    href={cert.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
-                  >
-                    Verifikasi ↗
-                  </a>
-                )}
-              </article>
-            </Reveal>
-          ))}
+          <div>
+            <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Sertifikasi & Pelatihan Utama</p>
+            <div className="mt-5 grid gap-px overflow-hidden rounded-[1.75rem] bg-white/15 sm:grid-cols-2">
+              {certifications.map((cert, index) => (
+                <Reveal key={cert.name} delay={index * 70} className="h-full">
+                  <article className="flex h-full min-h-52 flex-col bg-ink p-6 transition hover:bg-white/[.05] sm:p-7">
+                    <div className="flex items-start justify-between gap-4">
+                      <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/15 font-mono text-[10px] font-bold text-lime" aria-hidden="true">0{index + 1}</span>
+                      <span className="text-lg text-orange" aria-hidden="true">✦</span>
+                    </div>
+                    <h3 className="mt-6 font-display text-xl font-semibold leading-snug">{cert.name}</h3>
+                    <p className="mt-3 text-sm leading-6 text-cream/50">{cert.issuer}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

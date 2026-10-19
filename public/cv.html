@@ -15,6 +15,8 @@
       @page { margin: 1.5cm; size: A4; }
       @media print {
         .print-hidden { display: none !important; }
+        .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+        .keep-with-next { break-after: avoid; page-break-after: avoid; }
         body { background: white !important; }
         main { max-width: none !important; padding: 0 !important; }
         a { text-decoration: none !important; color: inherit !important; }

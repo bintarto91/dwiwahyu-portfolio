@@ -1,53 +1,22 @@
 import { contactNote, profile } from "../data/portfolio";
 import Reveal from "./Reveal";
-import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
   return (
-    <section id="kontak" className="scroll-mt-24 py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Kontak" title="Mari bekerja sama" centered />
-
-        <Reveal delay={150} className="mx-auto mt-12 max-w-3xl">
-          <div className="rounded-3xl bg-linear-to-br from-accent/50 via-white/10 to-accent-2/50 p-px">
-            <div className="rounded-[calc(1.5rem-1px)] bg-zinc-950 px-8 py-12 text-center sm:px-12">
-              <p className="mx-auto max-w-xl leading-relaxed text-zinc-400">
-                {contactNote}
-              </p>
-
-              <a
-                href={`mailto:${profile.email}`}
-                className="mt-8 inline-block rounded-full bg-linear-to-r from-accent to-accent-2 px-8 py-3.5 font-semibold text-zinc-950 transition-opacity hover:opacity-90"
-              >
-                {profile.email}
-              </a>
-
-              <ul className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                {profile.socials.map((social) => (
-                  <li key={social.label}>
-                    <a
-                      href={social.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 transition-colors hover:border-accent/40 hover:text-accent"
-                    >
-                      {social.label} ↗
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6">
-                <a
-                  href="/cv.html"
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-sky-500 text-sky-400 px-6 py-3 font-semibold transition-colors hover:bg-sky-500/10 hover:text-sky-300"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  Unduh CV (PDF)
-                </a>
-                <p className="mt-2 text-xs text-zinc-500 text-center">Buka di tab baru → Ctrl+P → Simpan sebagai PDF</p>
+    <section id="kontak" className="scroll-mt-20 bg-orange py-24 sm:py-32">
+      <div className="section-shell">
+        <Reveal>
+          <div className="grid items-end gap-10 lg:grid-cols-[1.2fr_.8fr]">
+            <div>
+              <p className="font-mono text-xs font-bold uppercase tracking-[.2em]">07 / Kontak</p>
+              <h2 className="mt-6 max-w-4xl font-display text-[clamp(3.2rem,8vw,7.5rem)] font-semibold leading-[.86] tracking-[-.065em]">Punya ide?<br /><span className="font-serif font-normal italic">Mari wujudkan.</span></h2>
+            </div>
+            <div className="lg:pb-2">
+              <p className="max-w-md leading-7 text-ink/70">{contactNote}</p>
+              <a href={`mailto:${profile.email}`} className="mt-8 inline-flex items-center gap-4 border-b-2 border-ink pb-2 text-lg font-bold transition hover:gap-6">{profile.email}<span aria-hidden="true">↗</span></a>
+              <div className="mt-8 flex flex-wrap gap-3">
+                {profile.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="rounded-full border border-ink/30 px-4 py-2 text-sm font-bold transition hover:bg-ink hover:text-orange">{social.label} ↗</a>)}
+                <a href="/cv-dwi-wahyu-bintarto-prasetyo.pdf" target="_blank" rel="noopener noreferrer" className="rounded-full border border-ink/30 px-4 py-2 text-sm font-bold transition hover:bg-ink hover:text-orange">Lihat CV ↗</a>
               </div>
             </div>
           </div>

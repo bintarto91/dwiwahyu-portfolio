@@ -5,7 +5,8 @@
 // ============================================================
 
 export const profile = {
-  name: "Dwi Wahyu Bintarto Prasetyo, S.Kom",
+  name: "Dwi Wahyu Bintarto Prasetyo",
+  formalName: "Dwi Wahyu Bintarto Prasetyo, S.Kom",
   initials: "DW",
   role: "Database Developer & Project Lead",
   tagline:
@@ -33,17 +34,17 @@ export const profile = {
 
 export const navLinks = [
   { label: "Tentang", href: "#tentang" },
-  { label: "Pengalaman", href: "#pengalaman" },
   { label: "Proyek", href: "#proyek" },
+  { label: "Pengalaman", href: "#pengalaman" },
   { label: "Keahlian", href: "#keahlian" },
-  { label: "Sertifikasi", href: "#sertifikasi" },
+  { label: "Pendidikan", href: "#pendidikan" },
   { label: "Kontak", href: "#kontak" },
 ];
 
 export const stats = [
   { value: "11+", label: "Tahun Pengalaman IT" },
   { value: "3", label: "Perusahaan Tempat Berkarier" },
-  { value: "9+", label: "Proyek Dikerjakan" },
+  { value: "9+", label: "Sistem Enterprise / Kritis" },
 ];
 
 // Riwayat karier, urut dari yang terbaru.
@@ -52,6 +53,8 @@ export const experiences = [
     period: "Jul 2018 – Sekarang",
     role: "Database Developer & Project Lead",
     company: "PT Swamedia Informatika",
+    companyDescription:
+      "Perusahaan Computer Systems Design Services (konsultan TI & software house) yang berbasis di Bandung.",
     location: "Bandung · Hybrid",
     description:
       "Menangani arsitektur dan pengelolaan database sekaligus memimpin jalannya proyek — dari perencanaan, koordinasi tim, hingga rilis, serta turut membantu pengembangan frontend & backend.",
@@ -61,6 +64,8 @@ export const experiences = [
     period: "Jan 2015 – Jul 2018",
     role: "Staff IT, Data Center & PIC Database",
     company: "PT Tirta Utama Abadi",
+    companyDescription:
+      "Perusahaan distributor resmi air mineral dan beverage produksi DANONE (AQUA, Vit, Mizone) untuk wilayah Jawa Barat.",
     location: "Bandung · Hybrid",
     description:
       "Mengoptimalkan keandalan infrastruktur IT perusahaan melalui pemantauan sistem proaktif, sekaligus menjadi penanggung jawab database.",
@@ -70,6 +75,8 @@ export const experiences = [
     period: "Feb 2014 – Agu 2014",
     role: "System Analyst",
     company: "Jasamedika Saranatama",
+    companyDescription:
+      "Perusahaan IT pengembang software medis dan penyedia layanan Sistem Informasi Manajemen Rumah Sakit (SIMRS).",
     location: "Bandung · On-site",
     description:
       "Menerjemahkan kebutuhan bisnis yang kompleks menjadi spesifikasi teknis, serta menjalankan operasional site aplikasi SIMRS.",
@@ -83,33 +90,48 @@ export const projects = [
     title: "NersCare ICU",
     description:
       "Aplikasi asuhan keperawatan untuk unit ICU — membantu perawat mencatat dan memantau kondisi pasien secara terstruktur. Dipakai oleh rumah sakit untuk standarisasi dokumentasi keperawatan kritis.",
+    impact:
+      "Mempercepat alur dokumentasi keperawatan ICU secara real-time dan terstruktur.",
     tags: ["Laravel", "PHP", "Aplikasi Kesehatan"],
     emoji: "🏥",
     demo: "https://nerscare-icu.com",
     repo: "https://github.com/bintarto91/nerscare-icu",
     image: "/nerscare-ss.jpg",
+    featured: true,
   },
   {
     category: "Pribadi",
     title: "SDEW Screening Risk",
     description:
       "Aplikasi skrining risiko kesehatan untuk membantu deteksi dini faktor risiko pasien. Online di sdew-screeningrisk.com — digunakan untuk triase awal pasien.",
+    impact:
+      "Aplikasi skrining risiko kesehatan digital untuk deteksi dini pasien.",
     tags: ["Aplikasi Kesehatan", "Skrining"],
     emoji: "🩺",
     demo: "https://sdew-screeningrisk.com",
     repo: "#",
     image: "/sdew-ss.jpg",
+    featured: true,
   },
   {
     category: "Pribadi",
     title: "TNC Teleheart Nursing Care",
+    role: "Project Lead",
     description:
-      "Platform layanan teleheart nursing care — menghubungkan perawat dan pasien secara digital untuk pemantauan jarak jauh. Konsep telehealth untuk perawatan jantung.",
-    tags: ["Telehealth", "Web App"],
+      "Aplikasi pendamping perawatan jantung untuk mencatat tanda vital dan keluhan harian, memantau riwayat kondisi, serta mengakses edukasi dan konsultasi dengan tenaga kesehatan.",
+    impact:
+      "Memfasilitasi pemantauan jarak jauh kondisi jantung pasien secara efisien via mobile & web.",
+    tags: ["Flutter", "Mobile App", "Telehealth", "Health Monitoring"],
     emoji: "❤️",
     demo: "#",
     repo: "#",
-    image: "",
+    image: "/tnc-dashboard.png",
+    gallery: [
+      "/tnc-dashboard.png",
+      "/tnc-monitoring-form.png",
+      "/tnc-monitoring-history.png",
+    ],
+    featured: true,
   },
   {
     category: "Pribadi",
@@ -134,15 +156,19 @@ export const projects = [
     image: "",
   },
   {
-    category: "Pribadi",
+    category: "Profesional",
     title: "Revamp Loccana",
+    role: "Project Lead · DBA · Frontend Support",
     description:
-      "Pembaruan tampilan (revamp) website Loccana — berfokus pada desain dan antarmuka modern. Proses bisnis terintegrasi ditunjukkan pada diagram alur.",
-    tags: ["CSS", "Web Design"],
+      "Modernisasi menyeluruh aplikasi dari CodeIgniter 2 dan MySQL ke Laravel, WSO2, dan PostgreSQL. Berfokus pada alur proses, validasi, arsitektur database, serta bagian inti sistem.",
+    impact:
+      "Berhasil melakukan migrasi arsitektur data tanpa downtime dan meningkatkan kecepatan query hingga 35%.",
+    tags: ["Laravel", "WSO2", "PostgreSQL", "Project Lead", "DBA"],
     emoji: "🎨",
     demo: "#",
-    repo: "https://github.com/bintarto91/revamp",
+    repo: "#",
     image: "/loccana-alur.jpg",
+    featured: true,
   },
   {
     category: "Kantor",
@@ -156,11 +182,12 @@ export const projects = [
     image: "",
   },
   {
-    category: "Kantor",
+    category: "Profesional",
     title: "Aplikasi Distribusi & Inventory",
+    role: "Project Lead · DBA · Frontend Support",
     description:
-      "Sistem distribusi dan inventory untuk mengelola stok serta alur barang secara terpusat. Mempercepat pencatatan mutasi barang antar gudang.",
-    tags: ["Inventory", "Distribusi"],
+      "Sistem operasional bisnis terintegrasi yang mencakup master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting. Berfokus pada alur proses, validasi, serta konsistensi data antarmodul.",
+    tags: ["Distribusi", "Procurement", "Inventory", "Accounting", "DBA"],
     emoji: "📦",
     demo: "#",
     repo: "#",
@@ -183,17 +210,12 @@ export const skillGroups = [
   {
     title: "Data & Database",
     emoji: "🗄️",
-    skills: ["SQL", "Desain Database", "Arsitektur Data", "Backup & Recovery"],
+    skills: ["PostgreSQL", "MySQL", "SQL Server", "DBeaver", "Navicat"],
   },
   {
     title: "Kepemimpinan & Analisis",
     emoji: "🧭",
-    skills: [
-      "Project Lead",
-      "Koordinasi Tim",
-      "Analisis Kebutuhan Bisnis",
-      "Dokumentasi",
-    ],
+    skills: ["Project Lead", "Agile/Scrum (SFC)", "System Analyst", "Data Analyst"],
   },
   {
     title: "Aplikasi & Infrastruktur",
@@ -203,29 +225,58 @@ export const skillGroups = [
   {
     title: "Web & Mobile",
     emoji: "🌐",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "PHP",
-      "Laravel",
-      "Java (pemula)",
-      "Android (pemula)",
-      "Git & GitHub",
-    ],
+    skills: ["PHP", "Laravel", "CodeIgniter", "Flutter", "React"],
   },
 ];
 
-// Sertifikasi & Pelatihan — isi dengan data asli Anda
+export const education = [
+  {
+    degree: "S1 Sistem Informasi",
+    institution: "Universitas Komputer Indonesia (UNIKOM)",
+    period: "2009–2013",
+    detail: "IPK 3.28",
+  },
+];
+
 export const certifications = [
-  // Contoh format:
-  // {
-  //   name: "AWS Certified Solutions Architect",
-  //   issuer: "Amazon Web Services",
-  //   year: 2024,
-  //   credentialId: "ABC123XYZ",
-  //   url: "https://aws.amazon.com/verification",
-  // },
+  {
+    name: "Data Analyst Certification",
+    issuer: "Dari Data Menjadi Berdaya",
+  },
+  {
+    name: "Android Development Training",
+    issuer: "Joftra Training Center",
+  },
+  {
+    name: "Extra Large Workshop Merakit dan Instalasi PC",
+    issuer: "Universitas Komputer Indonesia",
+  },
+  {
+    name: "Ready to Clouds Computing with Windows 8 and Office 365",
+    issuer: "Seminar Nasional Teknologi Informasi",
+  },
+];
+
+export const leadership = [
+  {
+    role: "Ketua RW 05 Citeureup & Webmaster",
+    period: "Aktif",
+    description:
+      "Mengelola tata kelola lingkungan, digitalisasi layanan warga, dan infrastruktur web komunitas.",
+    url: "https://www.rw05citeureup.my.id",
+  },
+  {
+    role: "Ketua Umum Ninja Mono Indonesia",
+    period: "2024–Sekarang",
+  },
+  {
+    role: "Pengurus ICMI Muda",
+    period: "2024–Sekarang",
+  },
+  {
+    role: "Pengurus Daerah X GM FKPPI",
+    period: "2021–Sekarang",
+  },
 ];
 
 export const contactNote =

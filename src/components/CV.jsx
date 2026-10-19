@@ -1,4 +1,4 @@
-import { profile, experiences, projects, skillGroups, stats } from "../data/portfolio";
+import { certifications, education, experiences, leadership, profile, projects, skillGroups, stats } from "../data/portfolio";
 import Reveal from "./Reveal";
 
 export default function CV() {
@@ -25,7 +25,7 @@ export default function CV() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <div>
               <h1 className="text-3xl sm:text-4xl font-bold text-zinc-950 tracking-tight">
-                {profile.name}
+                {profile.formalName}
               </h1>
               <p className="mt-2 text-lg text-sky-700 font-semibold">{profile.role}</p>
               <p className="mt-1 text-zinc-600">{profile.tagline}</p>
@@ -70,14 +70,15 @@ export default function CV() {
 
         {/* ===== PENGALAMAN KERJA ===== */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Pengalaman Kerja</h2>
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Pengalaman Kerja</h2>
           <div className="space-y-6">
             {experiences.map((exp, idx) => (
-              <div key={idx} className="border-l-2 border-sky-200 pl-6 pb-6 last:pb-0">
+              <div key={idx} className="avoid-break border-l-2 border-sky-200 pl-6 pb-6 last:pb-0">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                   <div>
                     <h3 className="font-bold text-lg text-zinc-950">{exp.role}</h3>
                     <p className="text-sky-700 font-medium">{exp.company}</p>
+                    <p className="mt-1 max-w-xl text-xs leading-relaxed text-zinc-500">{exp.companyDescription}</p>
                   </div>
                   <div className="text-right text-sm text-zinc-500 whitespace-nowrap">
                     <p>{exp.period}</p>
@@ -97,12 +98,29 @@ export default function CV() {
           </div>
         </section>
 
+        {/* ===== LEADERSHIP & COMMUNITY ===== */}
+        <section className="mb-10">
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Leadership & Community</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {leadership.map((item) => (
+              <div key={item.role} className="avoid-break rounded-lg border border-zinc-200 bg-zinc-50 p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-bold text-zinc-950">{item.role}</h3>
+                  <span className="whitespace-nowrap text-xs text-zinc-500">{item.period}</span>
+                </div>
+                {item.description && <p className="mt-2 text-sm leading-relaxed text-zinc-600">{item.description}</p>}
+                {item.url && <a href={item.url} className="mt-2 inline-block text-xs font-medium text-sky-700 underline">rw05citeureup.my.id</a>}
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ===== PROYEK UNGGULAN ===== */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Proyek Unggulan</h2>
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Proyek Unggulan</h2>
           <div className="space-y-4">
             {projects.filter((p) => p.demo && p.demo !== "#").slice(0, 5).map((proj, idx) => (
-              <div key={idx} className="border border-zinc-200 rounded-lg p-4 bg-zinc-50">
+              <div key={idx} className="avoid-break border border-zinc-200 rounded-lg p-4 bg-zinc-50">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
@@ -133,10 +151,10 @@ export default function CV() {
 
         {/* ===== KEahlian TEKNIS ===== */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Keahlian Teknis</h2>
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Keahlian Teknis</h2>
           <div className="space-y-6">
             {skillGroups.map((group, idx) => (
-              <div key={idx}>
+              <div key={idx} className="avoid-break">
                 <h3 className="font-semibold text-zinc-950 flex items-center gap-2 mb-3">
                   <span className="text-xl">{group.emoji}</span>
                   {group.title}
@@ -153,9 +171,33 @@ export default function CV() {
           </div>
         </section>
 
+        {/* ===== PENDIDIKAN & SERTIFIKASI ===== */}
+        <section className="mb-10">
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Pendidikan & Sertifikasi</h2>
+          {education.map((item) => (
+            <div key={item.degree} className="avoid-break border-l-2 border-sky-200 pl-6">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-bold text-zinc-950">{item.degree}</h3>
+                  <p className="text-sky-700 font-medium">{item.institution}</p>
+                </div>
+                <div className="text-right text-sm text-zinc-500"><p>{item.period}</p><p>{item.detail}</p></div>
+              </div>
+            </div>
+          ))}
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {certifications.map((cert) => (
+              <div key={cert.name} className="avoid-break rounded-lg border border-zinc-200 p-4">
+                <h3 className="font-semibold text-zinc-950">{cert.name}</h3>
+                <p className="mt-1 text-sm text-zinc-500">{cert.issuer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ===== STATISTIK ===== */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Statistik Karier</h2>
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Statistik Karier</h2>
           <div className="grid grid-cols-3 gap-6">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center p-4 bg-sky-50 rounded-xl border border-sky-100">

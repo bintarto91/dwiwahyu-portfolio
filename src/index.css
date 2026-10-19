@@ -1,86 +1,54 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
-
-  --color-accent: #38bdf8;
-  --color-accent-2: #60a5fa;
-
-  --animate-float: float 7s ease-in-out infinite;
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-14px);
-    }
-  }
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-ink: #11110f;
+  --color-cream: #f3f0e8;
+  --color-paper: #ebe7dc;
+  --color-orange: #ff6b35;
+  --color-lime: #bef264;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
+body { @apply bg-cream font-sans text-ink antialiased; }
+::selection { background: #ff6b35; color: #11110f; }
 
-body {
-  @apply bg-zinc-950 font-sans text-zinc-300 antialiased;
-}
-
-::selection {
-  background-color: rgb(56 189 248 / 0.28);
-  color: #fff;
-}
-
-/* Fokus keyboard yang jelas (aksesibilitas) */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-  border-radius: 6px;
+  outline: 3px solid #ff6b35;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
-/* Hormati pengguna yang mematikan animasi (aksesibilitas) */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #09090b;
-}
-::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 999px;
-  border: 2px solid #09090b;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
-}
-
-/* Latar belakang kotak-kotak halus untuk hero */
-@utility bg-grid {
+.hero-grid {
   background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
-  background-size: 44px 44px;
+    linear-gradient(to right, rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
 }
 
-/* Teks gradasi aksen */
-@utility text-gradient {
-  background-image: linear-gradient(100deg, #22d3ee, #38bdf8 45%, var(--color-accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.button-primary {
+  @apply inline-flex items-center gap-3 rounded-full bg-orange px-6 py-3.5 text-sm font-bold text-ink transition duration-300 hover:-translate-y-0.5 hover:bg-lime;
 }
+.button-secondary {
+  @apply inline-flex items-center rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-cream transition duration-300 hover:border-white/50 hover:bg-white/5;
+}
+.section-shell { @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-10; }
+.eyebrow { @apply font-mono text-xs font-semibold uppercase tracking-[.2em] text-orange; }
+.tag { @apply rounded-full border border-ink/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[.1em] text-ink/65; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #11110f; }
+::-webkit-scrollbar-thumb { background: #ff6b35; border: 3px solid #11110f; border-radius: 999px; }
