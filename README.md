@@ -3,7 +3,7 @@
 Website portofolio pribadi.
 Dibangun dengan **React 19 + Vite 8 + Tailwind CSS 4**.
 
-🌐 **Live:** https://portfolio-brown-six-tnq7e82s1v.vercel.app
+🌐 **Live:** https://dwiwahyu-portfolio.vercel.app
 
 ## Menjalankan di komputer
 
