@@ -44,6 +44,27 @@ lalu deploy ulang:
 powershell -ExecutionPolicy Bypass -File scripts\generate-og-image.ps1
 ```
 
+## Foto profil
+
+Foto profil tersimpan di `public/foto-profil.jpg` (900 × 1125 px).
+
+Untuk menggantinya, taruh foto baru di mana saja lalu jalankan:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\siapkan-foto-profil.ps1 -Sumber "C:\lokasi\foto-baru.jpg"
+```
+
+Skrip itu otomatis memotong foto ke bentuk potret 4:5, memperkecil ukurannya
+supaya website tetap cepat, lalu menyimpannya sebagai `public/foto-profil.jpg`.
+Geser potongan atas-bawah dengan `-PosisiAtasPersen` (default `4.5`).
+
+Setelah ganti foto, perbarui juga kartu pratinjau lalu deploy:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\generate-og-image.ps1
+npx vercel --prod --yes
+```
+
 ## Struktur folder
 
 ```
