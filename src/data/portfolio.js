@@ -76,10 +76,10 @@ export const projects = [
     title: "NersCare ICU",
     description:
       "Aplikasi asuhan keperawatan untuk unit ICU — membantu perawat mencatat dan memantau kondisi pasien secara terstruktur.",
-    tags: ["Aplikasi Kesehatan", "Web App"],
+    tags: ["Laravel", "PHP", "Aplikasi Kesehatan"],
     emoji: "🏥",
     demo: "#",
-    repo: "#",
+    repo: "https://github.com/bintarto91/nerscare-icu",
   },
   {
     category: "Pribadi",
@@ -106,10 +106,10 @@ export const projects = [
     title: "Web Rukun Warga",
     description:
       "Website untuk kebutuhan administrasi dan informasi lingkungan Rukun Warga.",
-    tags: ["Website", "Komunitas"],
+    tags: ["PHP", "Website", "Komunitas"],
     emoji: "🏘️",
     demo: "#",
-    repo: "#",
+    repo: "https://github.com/bintarto91/RW05",
   },
   {
     category: "Kantor",
@@ -167,7 +167,7 @@ export const skillGroups = [
   {
     title: "Web Development",
     emoji: "🌐",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Git & GitHub"],
+    skills: ["HTML", "CSS", "JavaScript", "PHP", "Laravel", "Git & GitHub"],
   },
 ];
 

@@ -2,6 +2,9 @@ import { projects } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+const hasLink = (project) =>
+  [project.demo, project.repo].some((url) => url && url !== "#");
+
 export default function Projects() {
   return (
     <section id="proyek" className="scroll-mt-24 py-24 sm:py-32">
@@ -47,24 +50,30 @@ export default function Projects() {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex items-center gap-5 border-t border-white/10 pt-4 text-sm font-medium">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-zinc-300 transition-colors hover:text-accent"
-                  >
-                    Demo ↗
-                  </a>
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-zinc-300 transition-colors hover:text-accent"
-                  >
-                    Kode ↗
-                  </a>
-                </div>
+                {hasLink(project) && (
+                  <div className="mt-6 flex items-center gap-5 border-t border-white/10 pt-4 text-sm font-medium">
+                    {project.demo && project.demo !== "#" && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-zinc-300 transition-colors hover:text-accent"
+                      >
+                        Demo ↗
+                      </a>
+                    )}
+                    {project.repo && project.repo !== "#" && (
+                      <a
+                        href={project.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-zinc-300 transition-colors hover:text-accent"
+                      >
+                        Kode ↗
+                      </a>
+                    )}
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}
