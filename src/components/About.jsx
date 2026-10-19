@@ -36,7 +36,7 @@ export default function About() {
                   <img
                     src={profile.photo}
                     alt={`Foto ${profile.name}`}
-                    loading="lazy"
+                    decoding="async"
                     className="aspect-[4/5] w-full object-cover"
                     onError={() => setFotoTampil(false)}
                   />
