@@ -36,6 +36,7 @@ export const navLinks = [
   { label: "Pengalaman", href: "#pengalaman" },
   { label: "Proyek", href: "#proyek" },
   { label: "Keahlian", href: "#keahlian" },
+  { label: "Sertifikasi", href: "#sertifikasi" },
   { label: "Kontak", href: "#kontak" },
 ];
 
@@ -81,91 +82,100 @@ export const projects = [
     category: "Pribadi",
     title: "NersCare ICU",
     description:
-      "Aplikasi asuhan keperawatan untuk unit ICU — membantu perawat mencatat dan memantau kondisi pasien secara terstruktur.",
+      "Aplikasi asuhan keperawatan untuk unit ICU — membantu perawat mencatat dan memantau kondisi pasien secara terstruktur. Dipakai oleh rumah sakit untuk standarisasi dokumentasi keperawatan kritis.",
     tags: ["Laravel", "PHP", "Aplikasi Kesehatan"],
     emoji: "🏥",
-    demo: "#",
+    demo: "https://nerscare-icu.com",
     repo: "https://github.com/bintarto91/nerscare-icu",
+    image: "/nerscare-ss.jpg",
   },
   {
     category: "Pribadi",
     title: "SDEW Screening Risk",
     description:
-      "Aplikasi skrining risiko kesehatan untuk membantu deteksi dini faktor risiko pasien.",
+      "Aplikasi skrining risiko kesehatan untuk membantu deteksi dini faktor risiko pasien. Online di sdew-screeningrisk.com — digunakan untuk triase awal pasien.",
     tags: ["Aplikasi Kesehatan", "Skrining"],
     emoji: "🩺",
-    demo: "#",
+    demo: "https://sdew-screeningrisk.com",
     repo: "#",
+    image: "/sdew-ss.jpg",
   },
   {
     category: "Pribadi",
     title: "TNC Teleheart Nursing Care",
     description:
-      "Platform layanan teleheart nursing care — menghubungkan perawat dan pasien secara digital untuk pemantauan jarak jauh.",
+      "Platform layanan teleheart nursing care — menghubungkan perawat dan pasien secara digital untuk pemantauan jarak jauh. Konsep telehealth untuk perawatan jantung.",
     tags: ["Telehealth", "Web App"],
     emoji: "❤️",
     demo: "#",
     repo: "#",
+    image: "",
   },
   {
     category: "Pribadi",
     title: "Web Rukun Warga",
     description:
-      "Website untuk kebutuhan administrasi dan informasi lingkungan Rukun Warga.",
+      "Website untuk kebutuhan administrasi dan informasi lingkungan Rukun Warga. Online di rw05citeureup.my.id — berisi pengumuman, pengaduan warga, dan data kependudukan.",
     tags: ["PHP", "Website", "Komunitas"],
     emoji: "🏘️",
-    demo: "#",
+    demo: "https://www.rw05citeureup.my.id",
     repo: "https://github.com/bintarto91/RW05",
+    image: "/rw05-ss.jpg",
   },
   {
     category: "Pribadi",
     title: "Aplikasi Laundry",
     description:
-      "Aplikasi manajemen layanan laundry — pencatatan pesanan, status cucian, dan data pelanggan.",
+      "Aplikasi manajemen layanan laundry — pencatatan pesanan, status cucian, dan data pelanggan. Sederhana tapi lengkap untuk usaha kecil.",
     tags: ["Web App"],
     emoji: "🧺",
     demo: "#",
     repo: "https://github.com/bintarto91/laundry",
+    image: "",
   },
   {
     category: "Pribadi",
     title: "Revamp Loccana",
     description:
-      "Pembaruan tampilan (revamp) website Loccana — berfokus pada desain dan antarmuka.",
+      "Pembaruan tampilan (revamp) website Loccana — berfokus pada desain dan antarmuka modern. Proses bisnis terintegrasi ditunjukkan pada diagram alur.",
     tags: ["CSS", "Web Design"],
     emoji: "🎨",
     demo: "#",
     repo: "https://github.com/bintarto91/revamp",
+    image: "/loccana-alur.jpg",
   },
   {
     category: "Kantor",
     title: "Aplikasi ERP Kawasan & Gudang Berikat",
     description:
-      "Aplikasi berbasis ERP untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat (fasilitas kepabeanan), mencakup pula perusahaan non-KB/GB.",
+      "Aplikasi berbasis ERP untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat (fasilitas kepabeanan), mencakup pula perusahaan non-KB/GB. Terintegrasi dengan bea cukai.",
     tags: ["ERP", "Kawasan Berikat", "Logistik"],
     emoji: "🏢",
     demo: "#",
     repo: "#",
+    image: "",
   },
   {
     category: "Kantor",
     title: "Aplikasi Distribusi & Inventory",
     description:
-      "Sistem distribusi dan inventory untuk mengelola stok serta alur barang secara terpusat.",
+      "Sistem distribusi dan inventory untuk mengelola stok serta alur barang secara terpusat. Mempercepat pencatatan mutasi barang antar gudang.",
     tags: ["Inventory", "Distribusi"],
     emoji: "📦",
     demo: "#",
     repo: "#",
+    image: "",
   },
   {
     category: "Kantor",
     title: "Operator Site Aplikasi SIMRS",
     description:
-      "Menjalankan dan mendampingi operasional aplikasi SIMRS (Sistem Informasi Manajemen Rumah Sakit).",
+      "Menjalankan dan mendampingi operasional aplikasi SIMRS (Sistem Informasi Manajemen Rumah Sakit). Termasuk migrasi data, pelatihan pengguna, dan troubleshooting harian.",
     tags: ["SIMRS", "System Analyst"],
     emoji: "🖥️",
     demo: "#",
     repo: "#",
+    image: "",
   },
 ];
 
@@ -204,6 +214,18 @@ export const skillGroups = [
       "Git & GitHub",
     ],
   },
+];
+
+// Sertifikasi & Pelatihan — isi dengan data asli Anda
+export const certifications = [
+  // Contoh format:
+  // {
+  //   name: "AWS Certified Solutions Architect",
+  //   issuer: "Amazon Web Services",
+  //   year: 2024,
+  //   credentialId: "ABC123XYZ",
+  //   url: "https://aws.amazon.com/verification",
+  // },
 ];
 
 export const contactNote =

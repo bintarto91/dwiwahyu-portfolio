@@ -36,6 +36,19 @@ export default function Contact() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-6">
+                <a
+                  href="/cv.html"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-sky-500 text-sky-400 px-6 py-3 font-semibold transition-colors hover:bg-sky-500/10 hover:text-sky-300"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Unduh CV (PDF)
+                </a>
+                <p className="mt-2 text-xs text-zinc-500 text-center">Buka di tab baru → Ctrl+P → Simpan sebagai PDF</p>
+              </div>
             </div>
           </div>
         </Reveal>

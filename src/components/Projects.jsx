@@ -22,58 +22,74 @@ export default function Projects() {
               delay={(index % 3) * 100}
               className="h-full"
             >
-              <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:bg-white/[0.05]">
-                <div className="flex items-center justify-between">
-                  <span className="grid h-12 w-12 place-items-center rounded-xl border border-white/10 bg-linear-to-br from-accent/15 to-accent-2/15 text-2xl">
-                    {project.emoji}
-                  </span>
-                  <span className="rounded-full border border-white/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-zinc-500">
-                    {project.category}
-                  </span>
-                </div>
-
-                <h3 className="mt-5 font-display text-lg font-bold text-white">
-                  {project.title}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
-                  {project.description}
-                </p>
-
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent"
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-
-                {hasLink(project) && (
-                  <div className="mt-6 flex items-center gap-5 border-t border-white/10 pt-4 text-sm font-medium">
-                    {project.demo && project.demo !== "#" && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-zinc-300 transition-colors hover:text-accent"
-                      >
-                        Demo ↗
-                      </a>
-                    )}
-                    {project.repo && project.repo !== "#" && (
-                      <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-zinc-300 transition-colors hover:text-accent"
-                      >
-                        Kode ↗
-                      </a>
-                    )}
+              <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden transition duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:bg-white/[0.05]">
+                {/* Gambar pratinjau proyek */}
+                {project.image && (
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={`Pratinjau ${project.title}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-zinc-950/60 via-transparent to-transparent" />
                   </div>
                 )}
+
+                <div className="flex-1 flex flex-col p-6">
+                  <div className="flex items-center justify-between">
+                    <span className="grid h-12 w-12 place-items-center rounded-xl border border-white/10 bg-linear-to-br from-accent/15 to-accent-2/15 text-2xl">
+                      {project.emoji}
+                    </span>
+                    <span className="rounded-full border border-white/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider text-zinc-500">
+                      {project.category}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-5 font-display text-lg font-bold text-white">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
+                    {project.description}
+                  </p>
+
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {hasLink(project) && (
+                    <div className="mt-6 flex items-center gap-5 border-t border-white/10 pt-4 text-sm font-medium">
+                      {project.demo && project.demo !== "#" && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-zinc-300 transition-colors hover:text-accent"
+                        >
+                          Demo ↗
+                        </a>
+                      )}
+                      {project.repo && project.repo !== "#" && (
+                        <a
+                          href={project.repo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-zinc-300 transition-colors hover:text-accent"
+                        >
+                          Kode ↗
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </article>
             </Reveal>
           ))}
