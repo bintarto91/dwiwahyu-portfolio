@@ -107,6 +107,29 @@ scripts/
 - Tautan "lewati ke konten", sorotan fokus keyboard, dukungan `prefers-reduced-motion`
 - Menu navigasi otomatis menyorot bagian yang sedang dibaca + garis progres baca
 
+## Halaman CV siap cetak
+
+URL: `https://dwiwahyu-portfolio.vercel.app/cv.html`
+
+- Desain A4, bersih, tanpa navigasi/sidebar
+- Tombol "Cetak / Simpan PDF" (Ctrl+P) sudah ada di halaman
+- Link di Kontak + Footer mengarah ke sana
+- Cocok untuk dilampirkan ke lamaran kerja
+
+## Sertifikasi
+
+Bagian `certifications` di `src/data/portfolio.js` sudah siap. Isi dengan data asli Anda — otomatis tampil di website. Format:
+
+```js
+{
+  name: "Nama Sertifikat",
+  issuer: "Penerbit",
+  year: 2024,
+  credentialId: "ABC123",      // opsional
+  url: "https://verifikasi",   // opsional
+},
+```
+
 ## Warna & tema
 
 Tema diatur di `src/index.css` bagian `@theme`:
