@@ -12,6 +12,9 @@ export const profile = {
     "Profesional IT dengan pengalaman lebih dari 11 tahun, berfokus pada arsitektur data — kini memimpin proyek sambil terus belajar dan membantu pengembangan frontend & backend.",
   location: "Bandung, Indonesia",
   email: "dwahyu47@gmail.com",
+  // Foto profil: simpan file foto di folder "public", pakai nama foto-profil.jpg
+  // (mis. public/foto-profil.jpg). Kosongkan ("") kalau belum ada foto.
+  photo: "/foto-profil.jpg",
   focus: ["Arsitektur Data", "Project Lead", "FE & BE"],
   about: [
     "Halo! Saya Dwi — profesional IT dengan pengalaman lebih dari 11 tahun. Perjalanan karier saya dimulai sebagai system analyst, berlanjut ke IT support, data center, dan PIC database, hingga kini sebagai database developer sekaligus project lead.",

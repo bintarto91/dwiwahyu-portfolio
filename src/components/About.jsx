@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { profile } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -8,6 +9,9 @@ const string = "text-emerald-300";
 const punct = "text-zinc-500";
 
 export default function About() {
+  // Kalau file foto belum ada, tampilkan bingkai cadangan (tidak error).
+  const [fotoTampil, setFotoTampil] = useState(Boolean(profile.photo));
+
   return (
     <section id="tentang" className="scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
@@ -17,15 +21,44 @@ export default function About() {
           description="Sedikit cerita tentang siapa saya dan apa yang saya kerjakan sehari-hari."
         />
 
-        <div className="mt-14 grid items-start gap-12 lg:grid-cols-[1.15fr_1fr]">
+        <div className="mt-14 grid items-start gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14">
+          {/* ---------------- Kolom kiri: foto + info singkat ---------------- */}
           <Reveal>
-            <div className="space-y-5 leading-relaxed text-zinc-400">
-              {profile.about.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-              ))}
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+              {/* cahaya lembut di belakang foto */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-3 rounded-[28px] bg-linear-to-br from-accent/25 via-transparent to-accent-2/25 blur-2xl"
+              />
+
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-2xl shadow-accent/10">
+                {fotoTampil ? (
+                  <img
+                    src={profile.photo}
+                    alt={`Foto ${profile.name}`}
+                    loading="lazy"
+                    className="aspect-[4/5] w-full object-cover"
+                    onError={() => setFotoTampil(false)}
+                  />
+                ) : (
+                  <div className="grid aspect-[4/5] w-full place-items-center bg-linear-to-br from-accent/15 via-zinc-900 to-accent-2/10">
+                    <div className="px-6 text-center">
+                      <span className="mx-auto grid h-20 w-20 place-items-center rounded-2xl bg-linear-to-br from-accent to-accent-2 font-display text-2xl font-bold text-zinc-950">
+                        {profile.initials}
+                      </span>
+                      <p className="mt-4 text-sm text-zinc-400">
+                        Foto belum ditambahkan
+                      </p>
+                      <p className="mt-1 font-mono text-xs text-zinc-500">
+                        public{profile.photo}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
-            <ul className="mt-8 space-y-3 text-sm">
+            <ul className="mx-auto mt-8 w-full max-w-sm space-y-3 text-sm lg:max-w-none">
               <li className="flex items-center gap-3">
                 <span className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/5">
                   📍
@@ -54,8 +87,15 @@ export default function About() {
             </ul>
           </Reveal>
 
+          {/* ---------------- Kolom kanan: cerita + kartu kode ---------------- */}
           <Reveal delay={150}>
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-accent/5">
+            <div className="space-y-5 leading-relaxed text-zinc-400">
+              {profile.about.map((paragraph) => (
+                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+              ))}
+            </div>
+
+            <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-accent/5">
               <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
                 <span className="h-3 w-3 rounded-full bg-red-500/70" />
                 <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
