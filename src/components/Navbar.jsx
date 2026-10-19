@@ -3,13 +3,38 @@ import { navLinks, profile } from "../data/portfolio";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [active, setActive] = useState("");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const sectionIds = navLinks.map((link) => link.href.slice(1));
+
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+
+      // Garis progres baca di bagian paling atas
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(window.scrollY / max, 1) : 0);
+
+      // Sorot menu sesuai bagian yang sedang dibaca
+      const pos = window.scrollY + 140;
+      let current = "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top + window.scrollY <= pos) current = id;
+      }
+      setActive(current);
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   const solid = scrolled || open;
@@ -34,16 +59,27 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-6 md:flex lg:gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-zinc-400 transition-colors hover:text-white"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = active === link.href.slice(1);
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  aria-current={isActive ? "true" : undefined}
+                  className={`relative block py-2 text-sm transition-colors ${
+                    isActive ? "text-white" : "text-zinc-400 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute inset-x-0 bottom-0 h-0.5 rounded-full bg-linear-to-r from-accent to-accent-2 transition-all duration-300 ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex items-center gap-3">
@@ -86,6 +122,13 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Garis progres baca — menampilkan seberapa jauh halaman sudah dibaca */}
+      <div
+        aria-hidden="true"
+        className="h-0.5 w-full origin-left bg-linear-to-r from-cyan-400 via-accent to-accent-2 transition-transform duration-150 ease-out"
+        style={{ transform: `scaleX(${progress})` }}
+      />
+
       {open && (
         <div className="border-t border-white/10 bg-zinc-950/95 px-6 py-4 backdrop-blur-xl md:hidden">
           <ul className="space-y-1">
@@ -94,7 +137,11 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2.5 text-sm text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
+                  className={`block rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-white/5 hover:text-white ${
+                    active === link.href.slice(1)
+                      ? "bg-white/5 text-white"
+                      : "text-zinc-300"
+                  }`}
                 >
                   {link.label}
                 </a>
