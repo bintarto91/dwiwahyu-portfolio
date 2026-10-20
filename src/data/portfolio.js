@@ -238,7 +238,7 @@ export const education = [
 
 export const certifications = [
   {
-    name: "Data Analyst Certification",
+    name: "Seminar Data Analyst",
     issuer: "Dari Data Menjadi Berdaya",
     type: "Seminar",
   },

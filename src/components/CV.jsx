@@ -119,7 +119,7 @@ export default function CV() {
         <section className="mb-10">
           <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Proyek Unggulan</h2>
           <div className="space-y-4">
-            {projects.filter((p) => p.demo && p.demo !== "#").slice(0, 5).map((proj, idx) => (
+            {projects.filter((p) => p.featured || (p.demo && p.demo !== "#")).map((proj, idx) => (
               <div key={idx} className="avoid-break border border-zinc-200 rounded-lg p-4 bg-zinc-50">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
@@ -135,14 +135,16 @@ export default function CV() {
                       ))}
                     </div>
                   </div>
-                  <a
-                    href={proj.demo}
-                    target="_blank"
-                    rel="noopener"
-                    className="whitespace-nowrap text-sky-700 hover:underline font-medium text-sm flex items-center gap-1"
-                  >
-                    Lihat ↗
-                  </a>
+                  {proj.demo && proj.demo !== "#" && (
+                    <a
+                      href={proj.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whitespace-nowrap text-sky-700 hover:underline font-medium text-sm flex items-center gap-1"
+                    >
+                      Lihat ↗
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
