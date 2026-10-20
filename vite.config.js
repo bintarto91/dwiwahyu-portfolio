@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        cv: "public/cv.html",
+        cv: "cv.html",
       },
     },
   },

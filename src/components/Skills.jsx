@@ -4,19 +4,27 @@ import SectionHeading from "./SectionHeading";
 
 const techBadges = {
   PostgreSQL: { mark: "PG", className: "bg-[#336791] text-white" },
-  MySQL: { mark: "MY", className: "bg-[#00758f] text-white" },
+  "MySQL / MariaDB": { mark: "MY", className: "bg-[#00758f] text-white" },
   "SQL Server": { mark: "MS", className: "bg-[#cc2927] text-white" },
   DBeaver: { mark: "DB", className: "bg-[#5b4638] text-white" },
   Navicat: { mark: "NV", className: "bg-[#16a085] text-white" },
+  "System Analysis": { mark: "SA", className: "bg-[#6d4aff] text-white" },
+  "Business Process Analysis": { mark: "BP", className: "bg-[#0f766e] text-white" },
+  "Requirements Analysis": { mark: "RA", className: "bg-[#b45309] text-white" },
+  "Project Coordination": { mark: "PC", className: "bg-[#1d4ed8] text-white" },
+  "Agile/Scrum": { mark: "AG", className: "bg-orange text-ink" },
   PHP: { mark: "PHP", className: "bg-[#777bb4] text-white" },
   Laravel: { mark: "L", className: "bg-[#ff2d20] text-white" },
   CodeIgniter: { mark: "CI", className: "bg-[#ee4323] text-white" },
+  JavaScript: { mark: "JS", className: "bg-[#f7df1e] text-ink" },
   Flutter: { mark: "FL", className: "bg-[#02569b] text-white" },
   React: { mark: "RE", className: "bg-[#087ea4] text-white" },
-  "Project Lead": { mark: "PL", className: "bg-ink text-cream" },
-  "Agile/Scrum (SFC)": { mark: "AG", className: "bg-orange text-ink" },
-  "System Analyst": { mark: "SA", className: "bg-[#6d4aff] text-white" },
-  "Data Analyst": { mark: "DA", className: "bg-[#157f6b] text-white" },
+  "Linux / Ubuntu": { mark: "LX", className: "bg-[#e95420] text-white" },
+  "Server & Database Administration": { mark: "SD", className: "bg-[#334155] text-white" },
+  "Git / GitLab": { mark: "GIT", className: "bg-[#fc6d26] text-white" },
+  "Data Center": { mark: "DC", className: "bg-[#0e7490] text-white" },
+  Troubleshooting: { mark: "TS", className: "bg-[#57534e] text-white" },
+  "Integrasi Sistem (WSO2)": { mark: "IN", className: "bg-[#f26522] text-white" },
 };
 
 function SkillBadge({ skill }) {
@@ -38,7 +46,7 @@ export default function Skills() {
       <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
           <div>
-            <SectionHeading eyebrow="05 / Kapabilitas" title="Keahlian yang saling melengkapi." description="Kombinasi pemahaman data, sistem, dan kepemimpinan untuk membawa proyek dari kebutuhan hingga implementasi." />
+            <SectionHeading eyebrow="05 / Kapabilitas" title="Keahlian yang Saling Melengkapi." description="Keahlian dalam pengelolaan database, analisis sistem, dan pengembangan aplikasi yang didukung pengalaman operasional IT serta koordinasi proyek." />
           </div>
           <div className="grid gap-px overflow-hidden rounded-[2rem] border border-ink/10 bg-ink/10 sm:grid-cols-2">
             {skillGroups.map((group, index) => (

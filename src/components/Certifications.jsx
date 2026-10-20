@@ -7,9 +7,9 @@ export default function Certifications() {
     <section id="pendidikan" className="scroll-mt-20 bg-ink py-24 text-cream sm:py-32">
       <div className="section-shell">
         <SectionHeading
-          eyebrow="06 / Pendidikan & Sertifikasi"
-          title="Fondasi akademik, terus diperkuat praktik."
-          description="Pendidikan formal serta pelatihan utama yang mendukung pengembangan sistem, analisis data, dan kepemimpinan teknis."
+          eyebrow="06 / Pendidikan"
+          title="Pendidikan dan Pengembangan Kompetensi."
+          description="Pendidikan formal, sertifikasi, serta pelatihan yang mendukung pekerjaan di bidang data, sistem, dan pengembangan aplikasi."
           light
         />
 
@@ -32,17 +32,17 @@ export default function Certifications() {
           </div>
 
           <div>
-            <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Sertifikasi & Pelatihan Utama</p>
+            <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Sertifikasi, Pelatihan & Seminar</p>
             <div className="mt-5 grid gap-px overflow-hidden rounded-[1.75rem] bg-white/15 sm:grid-cols-2">
               {certifications.map((cert, index) => (
                 <Reveal key={cert.name} delay={index * 70} className="h-full">
                   <article className="flex h-full min-h-52 flex-col bg-ink p-6 transition hover:bg-white/[.05] sm:p-7">
                     <div className="flex items-start justify-between gap-4">
                       <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/15 font-mono text-[10px] font-bold text-lime" aria-hidden="true">0{index + 1}</span>
-                      <span className="text-lg text-orange" aria-hidden="true">✦</span>
+                      <span className="rounded-full border border-orange/40 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-orange">{cert.type}</span>
                     </div>
                     <h3 className="mt-6 font-display text-xl font-semibold leading-snug">{cert.name}</h3>
-                    <p className="mt-3 text-sm leading-6 text-cream/50">{cert.issuer}</p>
+                    <p className="mt-3 text-sm leading-6 text-cream/65">{cert.issuer}</p>
                   </article>
                 </Reveal>
               ))}

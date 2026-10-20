@@ -22,14 +22,14 @@ $W = 1200
 $H = 630
 
 # ---------- warna ----------
-$bg1     = [System.Drawing.Color]::FromArgb(255, 13, 20, 36)
-$bg2     = [System.Drawing.Color]::FromArgb(255, 9, 9, 11)
-$accent  = [System.Drawing.Color]::FromArgb(255, 56, 189, 248)
-$accent2 = [System.Drawing.Color]::FromArgb(255, 96, 165, 250)
-$white   = [System.Drawing.Color]::FromArgb(255, 250, 250, 250)
-$gray    = [System.Drawing.Color]::FromArgb(255, 161, 161, 170)
-$dim     = [System.Drawing.Color]::FromArgb(255, 120, 120, 132)
-$dark    = [System.Drawing.Color]::FromArgb(255, 9, 9, 11)
+$bg1     = [System.Drawing.Color]::FromArgb(255, 26, 24, 21)
+$bg2     = [System.Drawing.Color]::FromArgb(255, 17, 17, 15)
+$accent  = [System.Drawing.Color]::FromArgb(255, 255, 107, 53)
+$accent2 = [System.Drawing.Color]::FromArgb(255, 255, 145, 100)
+$white   = [System.Drawing.Color]::FromArgb(255, 243, 240, 232)
+$gray    = [System.Drawing.Color]::FromArgb(255, 170, 165, 155)
+$dim     = [System.Drawing.Color]::FromArgb(255, 140, 135, 125)
+$dark    = [System.Drawing.Color]::FromArgb(255, 17, 17, 15)
 
 $font = "Segoe UI"
 
@@ -79,7 +79,7 @@ for ($x = 0; $x -le $W; $x += 44) { $g.DrawLine($gridPen, $x, 0, $x, $H) }
 for ($y = 0; $y -le $H; $y += 44) { $g.DrawLine($gridPen, 0, $y, $W, $y) }
 $gridPen.Dispose()
 
-# ---------- 3. cahaya biru ----------
+# ---------- 3. cahaya oranye ----------
 Draw-Glow $g 1040 60 340 $accent 18
 Draw-Glow $g 120 600 300 $accent2 12
 
@@ -183,7 +183,7 @@ $fNama.Dispose(); $bNama.Dispose()
 # ---------- 8. peran ----------
 $fRole = New-Font $font 33 "Bold" "Pixel"
 $bRole = New-Object System.Drawing.SolidBrush($accent)
-$g.DrawString("Database Developer & Project Lead", $fRole, $bRole, 90, 404)
+$g.DrawString("Database Developer & System Analyst", $fRole, $bRole, 90, 404)
 $fRole.Dispose(); $bRole.Dispose()
 
 # ---------- 9. keterangan ----------
@@ -200,7 +200,7 @@ $linePen.Dispose()
 # ---------- 11. baris bawah ----------
 $fFoot = New-Font $font 21 "Bold" "Pixel"
 $bFoot = New-Object System.Drawing.SolidBrush($white)
-$g.DrawString("Database  |  ERP  |  SIMRS", $fFoot, $bFoot, 90, 534)
+$g.DrawString("Database  |  Analisis Sistem  |  Aplikasi", $fFoot, $bFoot, 90, 534)
 $fFoot.Dispose(); $bFoot.Dispose()
 
 $fFoot2 = New-Font $font 21 "Regular" "Pixel"

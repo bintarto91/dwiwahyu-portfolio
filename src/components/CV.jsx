@@ -100,7 +100,7 @@ export default function CV() {
 
         {/* ===== LEADERSHIP & COMMUNITY ===== */}
         <section className="mb-10">
-          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Leadership & Community</h2>
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Organisasi & Kepemimpinan</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {leadership.map((item) => (
               <div key={item.role} className="avoid-break rounded-lg border border-zinc-200 bg-zinc-50 p-4">
@@ -188,7 +188,8 @@ export default function CV() {
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
             {certifications.map((cert) => (
               <div key={cert.name} className="avoid-break rounded-lg border border-zinc-200 p-4">
-                <h3 className="font-semibold text-zinc-950">{cert.name}</h3>
+                <span className="inline-block rounded-full bg-sky-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sky-700">{cert.type}</span>
+                <h3 className="mt-2 font-semibold text-zinc-950">{cert.name}</h3>
                 <p className="mt-1 text-sm text-zinc-500">{cert.issuer}</p>
               </div>
             ))}

@@ -8,18 +8,18 @@ export const profile = {
   name: "Dwi Wahyu Bintarto Prasetyo",
   formalName: "Dwi Wahyu Bintarto Prasetyo, S.Kom",
   initials: "DW",
-  role: "Database Developer & Project Lead",
+  role: "Database Developer & System Analyst",
   tagline:
-    "Profesional IT dengan pengalaman lebih dari 11 tahun, berfokus pada arsitektur data — kini memimpin proyek sambil terus belajar dan membantu pengembangan frontend & backend.",
+    "Database developer dengan pengalaman lebih dari 11 tahun pada pengembangan dan pengelolaan database, analisis kebutuhan sistem, serta pengembangan aplikasi bisnis.",
   location: "Bandung, Indonesia",
   email: "dwahyu47@gmail.com",
   // Foto profil: simpan file foto di folder "public", pakai nama foto-profil.jpg
   // (mis. public/foto-profil.jpg). Kosongkan ("") kalau belum ada foto.
   photo: "/foto-profil.jpg",
-  focus: ["Arsitektur Data", "Project Lead", "FE & BE"],
+  focus: ["Database Development", "System Analysis", "Application Development"],
   about: [
-    "Halo! Saya Dwi — profesional IT dengan pengalaman lebih dari 11 tahun. Perjalanan karier saya dimulai sebagai system analyst, berlanjut ke IT support, data center, dan PIC database, hingga kini sebagai database developer sekaligus project lead.",
-    "Sehari-hari saya banyak berkutat dengan sistem layanan kesehatan: SIMRS, aplikasi berbasis ERP, aplikasi keperawatan, hingga telemedicine. Berfokus pada arsitektur data, saya juga memimpin jalannya proyek dan turut membantu pengembangan frontend & backend.",
+    "Saya Dwi Wahyu Bintarto Prasetyo, dengan pengalaman lebih dari 11 tahun di bidang teknologi informasi. Perjalanan karier saya dimulai sebagai System Analyst, kemudian berkembang melalui berbagai tanggung jawab di bidang IT Support, Data Center, dan pengelolaan database, hingga saat ini berfokus sebagai Database Developer.",
+    "Sepanjang perjalanan tersebut, saya terlibat dalam pengembangan dan pengelolaan berbagai sistem bisnis, termasuk sistem informasi rumah sakit (SIMRS), aplikasi ERP, serta aplikasi di bidang kesehatan dan keperawatan. Selain pengembangan database, saya juga memiliki pengalaman dalam analisis kebutuhan, koordinasi proyek, dan pengembangan aplikasi, baik pada sisi frontend maupun backend.",
   ],
   socials: [
     { label: "GitHub", url: "https://github.com/bintarto91" },
@@ -44,21 +44,21 @@ export const navLinks = [
 export const stats = [
   { value: "11+", label: "Tahun Pengalaman IT" },
   { value: "3", label: "Perusahaan Tempat Berkarier" },
-  { value: "9+", label: "Sistem Enterprise / Kritis" },
+  { value: "8", label: "Proyek & Sistem Dikerjakan" },
 ];
 
 // Riwayat karier, urut dari yang terbaru.
 export const experiences = [
   {
     period: "Jul 2018 – Sekarang",
-    role: "Database Developer & Project Lead",
+    role: "Database Developer",
     company: "PT Swamedia Informatika",
     companyDescription:
       "Perusahaan Computer Systems Design Services (konsultan TI & software house) yang berbasis di Bandung.",
     location: "Bandung · Hybrid",
     description:
-      "Menangani arsitektur dan pengelolaan database sekaligus memimpin jalannya proyek — dari perencanaan, koordinasi tim, hingga rilis, serta turut membantu pengembangan frontend & backend.",
-    tags: ["Database", "Project Lead", "FE & BE"],
+      "Bertanggung jawab pada pengembangan dan pengelolaan database, analisis kebutuhan serta proses bisnis, pengembangan dan pemeliharaan aplikasi, serta koordinasi pekerjaan proyek sesuai penugasan.",
+    tags: ["Database", "Analisis Kebutuhan", "Pengembangan Aplikasi", "Koordinasi Proyek"],
   },
   {
     period: "Jan 2015 – Jul 2018",
@@ -68,8 +68,8 @@ export const experiences = [
       "Perusahaan distributor resmi air mineral dan beverage produksi DANONE (AQUA, Vit, Mizone) untuk wilayah Jawa Barat.",
     location: "Bandung · Hybrid",
     description:
-      "Mengoptimalkan keandalan infrastruktur IT perusahaan melalui pemantauan sistem proaktif, sekaligus menjadi penanggung jawab database.",
-    tags: ["Infrastruktur IT", "Data Center", "Database"],
+      "Menjalankan operasional IT perusahaan, memantau sistem dan infrastruktur secara berkala, serta menjadi penanggung jawab pengelolaan database.",
+    tags: ["Operasional IT", "Data Center", "Database"],
   },
   {
     period: "Feb 2014 – Agu 2014",
@@ -79,8 +79,8 @@ export const experiences = [
       "Perusahaan IT pengembang software medis dan penyedia layanan Sistem Informasi Manajemen Rumah Sakit (SIMRS).",
     location: "Bandung · On-site",
     description:
-      "Menerjemahkan kebutuhan bisnis yang kompleks menjadi spesifikasi teknis, serta menjalankan operasional site aplikasi SIMRS.",
-    tags: ["Analisis Sistem", "SIMRS"],
+      "Menganalisis kebutuhan sistem dan menyusun spesifikasi teknis, serta terlibat dalam implementasi dan operasional aplikasi SIMRS di rumah sakit, termasuk migrasi data, pelatihan pengguna, dan penanganan kendala harian.",
+    tags: ["Analisis Sistem", "SIMRS", "Implementasi"],
   },
 ];
 
@@ -89,9 +89,11 @@ export const projects = [
     category: "Pribadi",
     title: "NersCare ICU",
     description:
-      "Aplikasi asuhan keperawatan untuk unit ICU — membantu perawat mencatat dan memantau kondisi pasien secara terstruktur. Dipakai oleh rumah sakit untuk standarisasi dokumentasi keperawatan kritis.",
-    impact:
-      "Mempercepat alur dokumentasi keperawatan ICU secara real-time dan terstruktur.",
+      "Aplikasi berbasis web dan Android yang dikembangkan untuk mendukung asesmen kesepian pasien ICU, pencatatan hasil asesmen, serta dokumentasi tindak lanjut oleh perawat.",
+    highlight: {
+      label: "Fitur Utama",
+      text: "Asesmen kesepian pasien ICU, pencatatan hasil asesmen, dan dokumentasi tindak lanjut oleh perawat.",
+    },
     tags: ["Laravel", "PHP", "Aplikasi Kesehatan"],
     emoji: "🏥",
     demo: "https://nerscare-icu.com",
@@ -103,9 +105,11 @@ export const projects = [
     category: "Pribadi",
     title: "SDEW Screening Risk",
     description:
-      "Aplikasi skrining risiko kesehatan untuk membantu deteksi dini faktor risiko pasien. Online di sdew-screeningrisk.com — digunakan untuk triase awal pasien.",
-    impact:
-      "Aplikasi skrining risiko kesehatan digital untuk deteksi dini pasien.",
+      "Aplikasi skrining risiko kedaruratan diabetes yang membantu pengguna mencatat kadar gula darah, gejala, dan faktor risiko serta melihat hasil penilaian awal.",
+    highlight: {
+      label: "Fitur Utama",
+      text: "Pencatatan kadar gula darah dan gejala, penilaian faktor risiko, serta hasil penilaian awal.",
+    },
     tags: ["Aplikasi Kesehatan", "Skrining"],
     emoji: "🩺",
     demo: "https://sdew-screeningrisk.com",
@@ -116,11 +120,12 @@ export const projects = [
   {
     category: "Pribadi",
     title: "TNC Teleheart Nursing Care",
-    role: "Project Lead",
     description:
       "Aplikasi pendamping perawatan jantung untuk mencatat tanda vital dan keluhan harian, memantau riwayat kondisi, serta mengakses edukasi dan konsultasi dengan tenaga kesehatan.",
-    impact:
-      "Memfasilitasi pemantauan jarak jauh kondisi jantung pasien secara efisien via mobile & web.",
+    highlight: {
+      label: "Fitur Utama",
+      text: "Pemantauan tanda vital dan keluhan harian, riwayat pemantauan, edukasi, serta konsultasi dengan tenaga kesehatan.",
+    },
     tags: ["Flutter", "Mobile App", "Telehealth", "Health Monitoring"],
     emoji: "❤️",
     demo: "#",
@@ -135,9 +140,9 @@ export const projects = [
   },
   {
     category: "Pribadi",
-    title: "Web Rukun Warga",
+    title: "Website RW 05 Citeureup",
     description:
-      "Website untuk kebutuhan administrasi dan informasi lingkungan Rukun Warga. Online di rw05citeureup.my.id — berisi pengumuman, pengaduan warga, dan data kependudukan.",
+      "Website informasi dan layanan warga untuk lingkungan RW 05 Citeureup, berisi pengumuman, pengaduan warga, dan data kependudukan.",
     tags: ["PHP", "Website", "Komunitas"],
     emoji: "🏘️",
     demo: "https://www.rw05citeureup.my.id",
@@ -148,7 +153,7 @@ export const projects = [
     category: "Pribadi",
     title: "Aplikasi Laundry",
     description:
-      "Aplikasi manajemen layanan laundry — pencatatan pesanan, status cucian, dan data pelanggan. Sederhana tapi lengkap untuk usaha kecil.",
+      "Aplikasi manajemen layanan laundry yang mencakup pencatatan pesanan, pemantauan status cucian, dan pengelolaan data pelanggan.",
     tags: ["Web App"],
     emoji: "🧺",
     demo: "#",
@@ -156,14 +161,15 @@ export const projects = [
     image: "",
   },
   {
-    category: "Profesional",
+    category: "Perusahaan",
     title: "Revamp Loccana",
-    role: "Project Lead · DBA · Frontend Support",
     description:
-      "Modernisasi menyeluruh aplikasi dari CodeIgniter 2 dan MySQL ke Laravel, WSO2, dan PostgreSQL. Berfokus pada alur proses, validasi, arsitektur database, serta bagian inti sistem.",
-    impact:
-      "Berhasil melakukan migrasi arsitektur data tanpa downtime dan meningkatkan kecepatan query hingga 35%.",
-    tags: ["Laravel", "WSO2", "PostgreSQL", "Project Lead", "DBA"],
+      "Proyek modernisasi sistem bisnis yang mencakup analisis proses, perancangan arsitektur database, dan penyesuaian kebutuhan aplikasi menggunakan Laravel, PostgreSQL, serta komponen integrasi WSO2.",
+    highlight: {
+      label: "Kontribusi Saya",
+      text: "Analisis proses bisnis, perancangan arsitektur database, dan penyesuaian kebutuhan aplikasi.",
+    },
+    tags: ["Laravel", "PostgreSQL", "WSO2"],
     emoji: "🎨",
     demo: "#",
     repo: "#",
@@ -171,7 +177,7 @@ export const projects = [
     featured: true,
   },
   {
-    category: "Kantor",
+    category: "Perusahaan",
     title: "Aplikasi ERP Kawasan & Gudang Berikat",
     description:
       "Aplikasi berbasis ERP untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat (fasilitas kepabeanan), mencakup pula perusahaan non-KB/GB. Terintegrasi dengan bea cukai.",
@@ -182,9 +188,8 @@ export const projects = [
     image: "",
   },
   {
-    category: "Profesional",
+    category: "Perusahaan",
     title: "Aplikasi Distribusi & Inventory",
-    role: "Project Lead · DBA · Frontend Support",
     description:
       "Sistem operasional bisnis terintegrasi yang mencakup master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting. Berfokus pada alur proses, validasi, serta konsistensi data antarmodul.",
     tags: ["Distribusi", "Procurement", "Inventory", "Accounting", "DBA"],
@@ -193,39 +198,41 @@ export const projects = [
     repo: "#",
     image: "",
   },
-  {
-    category: "Kantor",
-    title: "Operator Site Aplikasi SIMRS",
-    description:
-      "Menjalankan dan mendampingi operasional aplikasi SIMRS (Sistem Informasi Manajemen Rumah Sakit). Termasuk migrasi data, pelatihan pengguna, dan troubleshooting harian.",
-    tags: ["SIMRS", "System Analyst"],
-    emoji: "🖥️",
-    demo: "#",
-    repo: "#",
-    image: "",
-  },
 ];
 
 export const skillGroups = [
   {
-    title: "Data & Database",
+    title: "Database Development",
     emoji: "🗄️",
-    skills: ["PostgreSQL", "MySQL", "SQL Server", "DBeaver", "Navicat"],
+    skills: ["PostgreSQL", "MySQL / MariaDB", "SQL Server", "DBeaver", "Navicat"],
   },
   {
-    title: "Kepemimpinan & Analisis",
+    title: "System Analysis & Project Coordination",
     emoji: "🧭",
-    skills: ["Project Lead", "Agile/Scrum (SFC)", "System Analyst", "Data Analyst"],
+    skills: [
+      "System Analysis",
+      "Business Process Analysis",
+      "Requirements Analysis",
+      "Project Coordination",
+      "Agile/Scrum",
+    ],
   },
   {
-    title: "Aplikasi & Infrastruktur",
-    emoji: "🖥️",
-    skills: ["ERP", "SIMRS", "Data Center", "Troubleshooting"],
-  },
-  {
-    title: "Web & Mobile",
+    title: "Application Development",
     emoji: "🌐",
-    skills: ["PHP", "Laravel", "CodeIgniter", "Flutter", "React"],
+    skills: ["PHP", "Laravel", "CodeIgniter", "JavaScript", "Flutter", "React"],
+  },
+  {
+    title: "Infrastructure & Integration",
+    emoji: "🖥️",
+    skills: [
+      "Linux / Ubuntu",
+      "Server & Database Administration",
+      "Git / GitLab",
+      "Data Center",
+      "Troubleshooting",
+      "Integrasi Sistem (WSO2)",
+    ],
   },
 ];
 
@@ -242,18 +249,22 @@ export const certifications = [
   {
     name: "Data Analyst Certification",
     issuer: "Dari Data Menjadi Berdaya",
+    type: "Sertifikasi",
   },
   {
     name: "Android Development Training",
     issuer: "Joftra Training Center",
+    type: "Pelatihan",
   },
   {
     name: "Extra Large Workshop Merakit dan Instalasi PC",
     issuer: "Universitas Komputer Indonesia",
+    type: "Workshop",
   },
   {
     name: "Ready to Clouds Computing with Windows 8 and Office 365",
     issuer: "Seminar Nasional Teknologi Informasi",
+    type: "Seminar",
   },
 ];
 
@@ -280,4 +291,4 @@ export const leadership = [
 ];
 
 export const contactNote =
-  "Punya proyek, kolaborasi, atau sekadar ingin menyapa? Kirim pesan lewat email — saya biasanya membalas dalam 1–2 hari.";
+  "Terbuka untuk diskusi dan kolaborasi terkait pengembangan database, analisis sistem, serta pengembangan aplikasi bisnis. Silakan hubungi saya melalui email atau LinkedIn.";
