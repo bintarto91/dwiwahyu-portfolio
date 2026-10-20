@@ -9,7 +9,7 @@ export default function Certifications() {
         <SectionHeading
           eyebrow="06 / Pendidikan"
           title="Pendidikan dan Pengembangan Kompetensi."
-          description="Pendidikan formal, sertifikasi, serta pelatihan yang mendukung pekerjaan di bidang data, sistem, dan pengembangan aplikasi."
+          description="Pendidikan formal, pelatihan, workshop, serta seminar yang mendukung pekerjaan di bidang data, sistem, dan pengembangan aplikasi."
           light
         />
 
@@ -32,7 +32,7 @@ export default function Certifications() {
           </div>
 
           <div>
-            <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Sertifikasi, Pelatihan & Seminar</p>
+            <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Pelatihan, Workshop &amp; Seminar</p>
             <div className="mt-5 grid gap-px overflow-hidden rounded-[1.75rem] bg-white/15 sm:grid-cols-2">
               {certifications.map((cert, index) => (
                 <Reveal key={cert.name} delay={index * 70} className="h-full">

@@ -164,12 +164,12 @@ export const projects = [
     category: "Perusahaan",
     title: "Revamp Loccana",
     description:
-      "Proyek modernisasi sistem bisnis yang mencakup analisis proses, perancangan arsitektur database, dan penyesuaian kebutuhan aplikasi menggunakan Laravel, PostgreSQL, serta komponen integrasi WSO2.",
+      "Modernisasi aplikasi distribusi dan inventory Loccana yang mencakup master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting. Mencakup analisis proses, perancangan arsitektur database, serta penyesuaian kebutuhan aplikasi menggunakan Laravel, PostgreSQL, dan komponen integrasi WSO2.",
     highlight: {
       label: "Kontribusi Saya",
       text: "Analisis proses bisnis, perancangan arsitektur database, dan penyesuaian kebutuhan aplikasi.",
     },
-    tags: ["Laravel", "PostgreSQL", "WSO2"],
+    tags: ["Laravel", "PostgreSQL", "WSO2", "Distribusi", "Inventory"],
     emoji: "🎨",
     demo: "#",
     repo: "#",
@@ -183,17 +183,6 @@ export const projects = [
       "Aplikasi berbasis ERP untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat (fasilitas kepabeanan), mencakup pula perusahaan non-KB/GB. Terintegrasi dengan bea cukai.",
     tags: ["ERP", "Kawasan Berikat", "Logistik"],
     emoji: "🏢",
-    demo: "#",
-    repo: "#",
-    image: "",
-  },
-  {
-    category: "Perusahaan",
-    title: "Aplikasi Distribusi & Inventory",
-    description:
-      "Sistem operasional bisnis terintegrasi yang mencakup master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting. Berfokus pada alur proses, validasi, serta konsistensi data antarmodul.",
-    tags: ["Distribusi", "Procurement", "Inventory", "Accounting", "DBA"],
-    emoji: "📦",
     demo: "#",
     repo: "#",
     image: "",
@@ -214,24 +203,20 @@ export const skillGroups = [
       "Business Process Analysis",
       "Requirements Analysis",
       "Project Coordination",
-      "Agile/Scrum",
     ],
   },
   {
     title: "Application Development",
     emoji: "🌐",
-    skills: ["PHP", "Laravel", "CodeIgniter", "JavaScript", "Flutter", "React"],
+    skills: ["PHP", "Laravel", "CodeIgniter", "JavaScript", "Flutter"],
   },
   {
     title: "Infrastructure & Integration",
     emoji: "🖥️",
     skills: [
-      "Linux / Ubuntu",
       "Server & Database Administration",
-      "Git / GitLab",
       "Data Center",
       "Troubleshooting",
-      "Integrasi Sistem (WSO2)",
     ],
   },
 ];
@@ -249,7 +234,7 @@ export const certifications = [
   {
     name: "Data Analyst Certification",
     issuer: "Dari Data Menjadi Berdaya",
-    type: "Sertifikasi",
+    type: "Seminar",
   },
   {
     name: "Android Development Training",

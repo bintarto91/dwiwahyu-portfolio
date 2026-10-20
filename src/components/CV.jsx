@@ -173,7 +173,7 @@ export default function CV() {
 
         {/* ===== PENDIDIKAN & SERTIFIKASI ===== */}
         <section className="mb-10">
-          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Pendidikan & Sertifikasi</h2>
+          <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Pendidikan, Pelatihan &amp; Seminar</h2>
           {education.map((item) => (
             <div key={item.degree} className="avoid-break border-l-2 border-sky-200 pl-6">
               <div className="flex items-start justify-between gap-3">
