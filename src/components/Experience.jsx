@@ -14,7 +14,7 @@ export default function Experience() {
                 <article className="grid gap-5 py-8 transition sm:grid-cols-[.28fr_.72fr] sm:py-10 lg:grid-cols-[.22fr_.35fr_.43fr]">
                   <div><p className="font-mono text-xs uppercase tracking-[.14em] text-orange">{item.period}</p><p className="mt-2 text-xs text-cream/50">{item.location}</p></div>
                   <div><p className="font-display text-2xl font-semibold leading-tight">{item.role}</p><p className="mt-2 font-medium text-lime">{item.company}</p><p className="mt-3 max-w-sm text-sm leading-6 text-cream/60">{item.companyDescription}</p></div>
-                  <div><p className="leading-7 text-cream/70">{item.description}</p><ul className="mt-5 flex flex-wrap gap-2">{item.tags.map((tag) => <li key={tag} className="rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-wider text-cream/65">{tag}</li>)}</ul></div>
+                  <div className="sm:col-span-2 lg:col-span-1"><p className="leading-7 text-cream/70">{item.description}</p><ul className="mt-5 flex flex-wrap gap-2">{item.tags.map((tag) => <li key={tag} className="rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-wider text-cream/65">{tag}</li>)}</ul></div>
                 </article>
               </Reveal>
             </li>

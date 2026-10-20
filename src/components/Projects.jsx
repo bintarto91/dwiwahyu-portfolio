@@ -72,8 +72,13 @@ export default function Projects() {
             <span className="font-mono text-xs text-ink/55">{more.length} proyek</span>
           </div>
           <div className="grid gap-px overflow-hidden rounded-2xl bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
-            {more.map((project) => (
-              <article key={project.title} className="flex min-h-72 flex-col bg-cream p-7 transition hover:bg-white">
+            {more.map((project, index) => (
+              <article
+                key={project.title}
+                className={`flex min-h-72 flex-col bg-cream p-7 transition hover:bg-white ${
+                  more.length % 2 === 1 && index === more.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
+                }`}
+              >
                 <div className="flex items-start justify-between"><span className="text-2xl">{project.emoji}</span><span className="font-mono text-[10px] uppercase tracking-wider text-ink/55">{project.category}</span></div>
                 <h4 className="mt-8 font-display text-xl font-semibold">{project.title}</h4>
                 {project.role && <p className="mt-2 font-mono text-[10px] font-semibold uppercase tracking-[.1em] text-orange">{project.role}</p>}
@@ -85,7 +90,7 @@ export default function Projects() {
               </article>
             ))}
             {Array.from({ length: (3 - (more.length % 3)) % 3 }).map((_, index) => (
-              <div key={`filler-${index}`} aria-hidden="true" className="hidden bg-cream lg:block" />
+              <div key={`filler-lg-${index}`} aria-hidden="true" className="hidden bg-cream lg:block" />
             ))}
           </div>
         </Reveal>

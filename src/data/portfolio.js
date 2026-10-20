@@ -44,7 +44,7 @@ export const navLinks = [
 export const stats = [
   { value: "11+", label: "Tahun Pengalaman IT" },
   { value: "3", label: "Perusahaan Tempat Berkarier" },
-  { value: "8", label: "Proyek & Sistem Dikerjakan" },
+  { value: "7", label: "Proyek & Sistem Dikerjakan" },
 ];
 
 // Riwayat karier, urut dari yang terbaru.
@@ -57,8 +57,14 @@ export const experiences = [
       "Perusahaan Computer Systems Design Services (konsultan TI & software house) yang berbasis di Bandung.",
     location: "Bandung · Hybrid",
     description:
-      "Bertanggung jawab pada pengembangan dan pengelolaan database, analisis kebutuhan serta proses bisnis, pengembangan dan pemeliharaan aplikasi, serta koordinasi pekerjaan proyek sesuai penugasan.",
-    tags: ["Database", "Analisis Kebutuhan", "Pengembangan Aplikasi", "Koordinasi Proyek"],
+      "Berfokus pada pengembangan dan pengelolaan database, analisis kebutuhan sistem, serta pengembangan aplikasi bisnis. Saat ini juga menjalankan tanggung jawab sebagai Database Administrator (DBA) dan Project Lead, meliputi pengelolaan database, koordinasi tim, perencanaan pekerjaan, serta pengawasan proses pengembangan aplikasi. Ke depan, peran pekerjaan juga diarahkan pada Full Stack Development dengan memanfaatkan AI sebagai alat bantu pengembangan.",
+    tags: [
+      "Database Development",
+      "Database Administration (DBA)",
+      "System Analysis",
+      "Project Lead",
+      "Application Development",
+    ],
   },
   {
     period: "Jan 2015 – Jul 2018",
@@ -68,8 +74,8 @@ export const experiences = [
       "Perusahaan distributor resmi air mineral dan beverage produksi DANONE (AQUA, Vit, Mizone) untuk wilayah Jawa Barat.",
     location: "Bandung · Hybrid",
     description:
-      "Menjalankan operasional IT perusahaan, memantau sistem dan infrastruktur secara berkala, serta menjadi penanggung jawab pengelolaan database.",
-    tags: ["Operasional IT", "Data Center", "Database"],
+      "Bertanggung jawab terhadap pengelolaan database serta mendukung operasional IT dan Data Center perusahaan.",
+    tags: ["Database", "Operasional IT", "Data Center"],
   },
   {
     period: "Feb 2014 – Agu 2014",
@@ -79,8 +85,8 @@ export const experiences = [
       "Perusahaan IT pengembang software medis dan penyedia layanan Sistem Informasi Manajemen Rumah Sakit (SIMRS).",
     location: "Bandung · On-site",
     description:
-      "Menganalisis kebutuhan sistem dan menyusun spesifikasi teknis, serta terlibat dalam implementasi dan operasional aplikasi SIMRS di rumah sakit, termasuk migrasi data, pelatihan pengguna, dan penanganan kendala harian.",
-    tags: ["Analisis Sistem", "SIMRS", "Implementasi"],
+      "Terlibat dalam analisis dan implementasi Sistem Informasi Manajemen Rumah Sakit (SIMRS). Salah satu penugasan dilakukan di RSUD Sawahlunto, Sumatera Barat, pada 20 Mei–29 Juni 2014 untuk implementasi SIMRS Medifirst2000, meliputi instalasi, konfigurasi aplikasi, pengaturan master data, pelatihan pengguna, serta menjalankan tugas Operator Site.",
+    tags: ["System Analysis", "Implementasi SIMRS", "Konfigurasi Aplikasi", "Pelatihan Pengguna"],
   },
 ];
 
@@ -164,10 +170,10 @@ export const projects = [
     category: "Perusahaan",
     title: "Revamp Loccana",
     description:
-      "Modernisasi aplikasi distribusi dan inventory Loccana yang mencakup master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting. Mencakup analisis proses, perancangan arsitektur database, serta penyesuaian kebutuhan aplikasi menggunakan Laravel, PostgreSQL, dan komponen integrasi WSO2.",
+      "Proyek pengembangan dan modernisasi aplikasi distribusi serta inventori Loccana, dikerjakan bersama tim perusahaan. Mencakup modul master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting dengan Laravel, PostgreSQL, serta komponen integrasi WSO2.",
     highlight: {
       label: "Kontribusi Saya",
-      text: "Analisis proses bisnis, perancangan arsitektur database, dan penyesuaian kebutuhan aplikasi.",
+      text: "Analisis proses bisnis, pengelolaan dan perancangan database, koordinasi proyek, serta pengembangan aplikasi.",
     },
     tags: ["Laravel", "PostgreSQL", "WSO2", "Distribusi", "Inventory"],
     emoji: "🎨",
