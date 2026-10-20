@@ -60,8 +60,8 @@ export default function Hero() {
             <img
               src={profile.photo}
               alt={`Dwi Wahyu Bintarto Prasetyo, ${profile.role}`}
-              width="854"
-              height="1280"
+              width="1000"
+              height="1339"
               fetchPriority="high"
               decoding="async"
               className="h-full w-full object-cover object-[50%_28%] saturate-[.9] contrast-[1.03]"

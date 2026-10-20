@@ -22,6 +22,9 @@ body { @apply bg-cream font-sans text-ink antialiased; }
   border-radius: 4px;
 }
 
+/* Di atas latar oranye, fokus memakai warna gelap agar tetap terlihat */
+#kontak :focus-visible { outline-color: #11110f; }
+
 .hero-grid {
   background-image:
     linear-gradient(to right, rgba(255,255,255,.055) 1px, transparent 1px),

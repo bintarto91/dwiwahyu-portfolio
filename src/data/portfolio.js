@@ -104,7 +104,7 @@ export const projects = [
     emoji: "🏥",
     demo: "https://nerscare-icu.com",
     repo: "https://github.com/bintarto91/nerscare-icu",
-    image: "/nerscare-ss.jpg",
+    image: "/nerscare-ss.webp",
     featured: true,
   },
   {
@@ -120,7 +120,7 @@ export const projects = [
     emoji: "🩺",
     demo: "https://sdew-screeningrisk.com",
     repo: "#",
-    image: "/sdew-ss.jpg",
+    image: "/sdew-ss.webp",
     featured: true,
   },
   {
@@ -136,11 +136,11 @@ export const projects = [
     emoji: "❤️",
     demo: "#",
     repo: "#",
-    image: "/tnc-dashboard.png",
+    image: "/tnc-dashboard.webp",
     gallery: [
-      "/tnc-dashboard.png",
-      "/tnc-monitoring-form.png",
-      "/tnc-monitoring-history.png",
+      "/tnc-dashboard.webp",
+      "/tnc-monitoring-form.webp",
+      "/tnc-monitoring-history.webp",
     ],
     featured: true,
   },
@@ -148,12 +148,12 @@ export const projects = [
     category: "Pribadi",
     title: "Website RW 05 Citeureup",
     description:
-      "Website informasi dan layanan warga untuk lingkungan RW 05 Citeureup, berisi pengumuman, pengaduan warga, dan data kependudukan.",
+      "Portal informasi dan layanan warga RW 05 Citeureup, mencakup pengajuan surat, pelacakan status pengajuan, informasi kegiatan, transparansi keuangan, layanan kesehatan, serta kanal aspirasi warga.",
     tags: ["PHP", "Website", "Komunitas"],
     emoji: "🏘️",
     demo: "https://www.rw05citeureup.my.id",
     repo: "https://github.com/bintarto91/RW05",
-    image: "/rw05-ss.jpg",
+    image: "/rw05-ss.webp",
   },
   {
     category: "Pribadi",
@@ -179,7 +179,7 @@ export const projects = [
     emoji: "🎨",
     demo: "#",
     repo: "#",
-    image: "/loccana-alur.jpg",
+    image: "/loccana-alur.webp",
     featured: true,
   },
   {

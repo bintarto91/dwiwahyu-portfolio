@@ -46,7 +46,7 @@ powershell -ExecutionPolicy Bypass -File scripts\generate-og-image.ps1
 
 ## Foto profil
 
-Foto profil tersimpan di `public/foto-profil.jpg` (900 × 1125 px).
+Foto profil tersimpan di `public/foto-profil.jpg` (1000 × 1339 px).
 
 Untuk menggantinya, taruh foto baru di mana saja lalu jalankan:
 

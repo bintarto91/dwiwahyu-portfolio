@@ -12,6 +12,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || open ? "border-b border-white/10 bg-ink/90 backdrop-blur-xl" : "bg-transparent"}`}>
       <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10" aria-label="Navigasi utama">
@@ -29,10 +38,9 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <a href="/cv-dwi-wahyu-bintarto-prasetyo.pdf" target="_blank" rel="noopener noreferrer" className="hidden rounded-full border border-cream/25 px-5 py-2.5 text-xs font-bold uppercase tracking-[.12em] text-cream transition hover:border-orange hover:text-orange sm:block">Lihat CV ↗</a>
-          <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="menu-mobile" aria-label={open ? "Tutup menu" : "Buka menu"} className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-cream lg:hidden">
-            <span className="sr-only">Menu</span>
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <a href="/cv-dwi-wahyu-bintarto-prasetyo.pdf" target="_blank" rel="noopener noreferrer" className="hidden rounded-full border border-cream/25 px-5 py-3 text-xs font-bold uppercase tracking-[.12em] text-cream transition hover:border-orange hover:text-orange sm:block">Lihat CV ↗</a>
+          <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="menu-mobile" aria-label={open ? "Tutup menu" : "Buka menu"} className="grid h-11 w-11 place-items-center rounded-full border border-white/20 text-cream lg:hidden">
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
               {open ? <path d="m6 6 12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
             </svg>
           </button>

@@ -6,6 +6,18 @@ const featured = projects.filter((project) => project.featured).slice(0, 4);
 const more = projects.filter((project) => !featured.includes(project));
 const valid = (url) => url && url !== "#";
 
+// Dimensi intrinsik gambar (untuk mencegah pergeseran layout saat gambar dimuat).
+const imageSize = {
+  "/nerscare-ss.webp": [741, 404],
+  "/sdew-ss.webp": [800, 396],
+  "/rw05-ss.webp": [800, 366],
+  "/loccana-alur.webp": [800, 333],
+  "/tnc-dashboard.webp": [600, 1333],
+  "/tnc-monitoring-form.webp": [600, 1333],
+  "/tnc-monitoring-history.webp": [600, 1333],
+};
+const sizeOf = (src) => imageSize[src] ?? [null, null];
+
 function LinkArrow() {
   return <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>;
 }
@@ -23,20 +35,25 @@ export default function Projects() {
                 <div className={`relative min-h-64 overflow-hidden sm:min-h-80 lg:min-h-[430px] ${index % 2 ? "lg:order-2" : ""}`}>
                   {project.gallery ? (
                     <div className="absolute inset-0 grid grid-cols-3 items-center gap-2 bg-[#dbe9e2] p-4 sm:gap-3 sm:p-6">
-                      {project.gallery.map((image, imageIndex) => (
-                        <img
-                          key={image}
-                          src={image}
-                          alt={`Tampilan ${imageIndex + 1} proyek ${project.title}`}
-                          loading="lazy"
-                          decoding="async"
-                          className={`max-h-full w-full rounded-xl object-contain shadow-xl transition duration-700 group-hover:-translate-y-1 ${imageIndex === 1 ? "translate-y-3" : "-translate-y-1"}`}
-                        />
-                      ))}
+                      {project.gallery.map((image, imageIndex) => {
+                        const [w, h] = sizeOf(image);
+                        return (
+                          <img
+                            key={image}
+                            src={image}
+                            alt={`Tampilan ${imageIndex + 1} proyek ${project.title}`}
+                            width={w}
+                            height={h}
+                            loading="lazy"
+                            decoding="async"
+                            className={`max-h-full w-full rounded-xl object-contain shadow-xl transition duration-700 group-hover:-translate-y-1 ${imageIndex === 1 ? "translate-y-3" : "-translate-y-1"}`}
+                          />
+                        );
+                      })}
                     </div>
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-[#dbe9e2] p-4 sm:p-6">
-                      <img src={project.image} alt={`Tampilan proyek ${project.title}`} loading="lazy" decoding="async" className="max-h-full w-full rounded-xl object-contain shadow-xl transition duration-700 group-hover:scale-[1.02]" />
+                      <img src={project.image} alt={`Tampilan proyek ${project.title}`} width={sizeOf(project.image)[0]} height={sizeOf(project.image)[1]} loading="lazy" decoding="async" className="max-h-full w-full rounded-xl object-contain shadow-xl transition duration-700 group-hover:scale-[1.02]" />
                     </div>
                   )}
                   <div className="absolute inset-0 bg-linear-to-t from-ink/30 to-transparent" />
@@ -57,8 +74,8 @@ export default function Projects() {
                     <ul className="mt-7 flex flex-wrap gap-2">{project.tags.map((tag) => <li key={tag} className="tag">{tag}</li>)}</ul>
                   </div>
                   <div className="mt-10 flex flex-wrap gap-3 border-t border-ink/10 pt-6">
-                    {valid(project.demo) && <a href={project.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-bold hover:text-orange">Kunjungi proyek <LinkArrow /></a>}
-                    {valid(project.repo) && <a href={project.repo} target="_blank" rel="noreferrer" className="ml-auto text-sm font-semibold text-ink/50 hover:text-orange">GitHub ↗</a>}
+                    {valid(project.demo) && <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold hover:text-orange">Kunjungi proyek <LinkArrow /></a>}
+                    {valid(project.repo) && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="ml-auto text-sm font-semibold text-ink/50 hover:text-orange">GitHub ↗</a>}
                   </div>
                 </div>
               </article>
@@ -84,8 +101,8 @@ export default function Projects() {
                 {project.role && <p className="mt-2 font-mono text-[10px] font-semibold uppercase tracking-[.1em] text-orange">{project.role}</p>}
                 <p className="mt-3 flex-1 text-sm leading-6 text-ink/65">{project.description}</p>
                 <div className="mt-6 flex gap-4 text-xs font-bold uppercase tracking-wider">
-                  {valid(project.demo) && <a href={project.demo} target="_blank" rel="noreferrer" className="hover:text-orange">Demo ↗</a>}
-                  {valid(project.repo) && <a href={project.repo} target="_blank" rel="noreferrer" className="hover:text-orange">Kode ↗</a>}
+                  {valid(project.demo) && <a href={project.demo} target="_blank" rel="noopener noreferrer" className="hover:text-orange">Demo ↗</a>}
+                  {valid(project.repo) && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="hover:text-orange">Kode ↗</a>}
                 </div>
               </article>
             ))}

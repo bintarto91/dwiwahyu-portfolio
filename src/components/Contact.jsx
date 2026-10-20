@@ -15,7 +15,7 @@ export default function Contact() {
               <p className="max-w-md leading-7 text-ink/85">{contactNote}</p>
               <a href={`mailto:${profile.email}`} className="mt-8 inline-flex items-center gap-4 border-b-2 border-ink pb-2 text-lg font-bold transition hover:gap-6">{profile.email}<span aria-hidden="true">↗</span></a>
               <div className="mt-8 flex flex-wrap gap-3">
-                {profile.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="rounded-full border border-ink/30 px-4 py-2 text-sm font-bold transition hover:bg-ink hover:text-orange">{social.label} ↗</a>)}
+                {profile.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-ink/30 px-4 py-2 text-sm font-bold transition hover:bg-ink hover:text-orange">{social.label} ↗</a>)}
                 <a href="/cv-dwi-wahyu-bintarto-prasetyo.pdf" target="_blank" rel="noopener noreferrer" className="rounded-full border border-ink/30 px-4 py-2 text-sm font-bold transition hover:bg-ink hover:text-orange">Lihat CV ↗</a>
               </div>
             </div>
