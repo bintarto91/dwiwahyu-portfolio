@@ -103,11 +103,16 @@ export default function CV() {
           <h2 className="keep-with-next text-xl font-bold text-zinc-950 uppercase tracking-wide border-b border-zinc-200 pb-2 mb-4">Organisasi & Kepemimpinan</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {leadership.map((item) => (
-              <div key={item.role} className="avoid-break rounded-lg border border-zinc-200 bg-zinc-50 p-4">
+              <div key={item.organization} className="avoid-break rounded-lg border border-zinc-200 bg-zinc-50 p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-bold text-zinc-950">{item.role}</h3>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">{item.organization}</p>
+                    <h3 className="mt-1 font-bold text-zinc-950">{item.role}</h3>
+                  </div>
                   <span className="whitespace-nowrap text-xs text-zinc-500">{item.period}</span>
                 </div>
+                {item.organizationLevel && <p className="mt-1 text-xs font-medium text-zinc-500">{item.organizationLevel}</p>}
+                {item.additionalRole && <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-700">{item.additionalRole}</p>}
                 {item.description && <p className="mt-2 text-sm leading-relaxed text-zinc-600">{item.description}</p>}
                 {item.url && <a href={item.url} className="mt-2 inline-block text-xs font-medium text-sky-700 underline">rw05citeureup.my.id</a>}
               </div>

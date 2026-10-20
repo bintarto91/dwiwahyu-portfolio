@@ -290,22 +290,29 @@ export const certifications = [
 
 export const leadership = [
   {
-    role: "Ketua RW 05 Citeureup & Webmaster",
+    organization: "RW 05 Citeureup",
+    role: "Ketua RW 05",
+    additionalRole: "Mengelola website RW 05.",
     period: "Aktif",
     description:
-      "Mengelola tata kelola lingkungan, digitalisasi layanan warga, dan infrastruktur web komunitas.",
+      "Mengelola tata kelola lingkungan dan digitalisasi layanan warga.",
     url: "https://www.rw05citeureup.my.id",
   },
   {
-    role: "Ketua Umum Ninja Mono Indonesia",
+    organization: "Ninja Mono Owner Indonesia",
+    role: "Ketua Umum",
+    additionalRole: "Pendiri Ninja Mono Owner Indonesia Chapter Bandung",
     period: "2024–Sekarang",
   },
   {
-    role: "Pengurus ICMI Muda",
+    organization: "ICMI Muda",
+    role: "Pengurus Bidang IT",
     period: "2024–Sekarang",
   },
   {
-    role: "Pengurus Daerah X GM FKPPI",
+    organization: "PD X GM FKPPI",
+    role: "Wakil Ketua Bidang IT",
+    organizationLevel: "Pengurus Daerah Jawa Barat",
     period: "2021–Sekarang",
   },
 ];
