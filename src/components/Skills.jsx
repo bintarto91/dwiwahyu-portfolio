@@ -12,19 +12,14 @@ const techBadges = {
   "Business Process Analysis": { mark: "BP", className: "bg-[#0f766e] text-white" },
   "Requirements Analysis": { mark: "RA", className: "bg-[#b45309] text-white" },
   "Project Coordination": { mark: "PC", className: "bg-[#1d4ed8] text-white" },
-  "Agile/Scrum": { mark: "AG", className: "bg-orange text-ink" },
   PHP: { mark: "PHP", className: "bg-[#777bb4] text-white" },
   Laravel: { mark: "L", className: "bg-[#ff2d20] text-white" },
   CodeIgniter: { mark: "CI", className: "bg-[#ee4323] text-white" },
   JavaScript: { mark: "JS", className: "bg-[#f7df1e] text-ink" },
   Flutter: { mark: "FL", className: "bg-[#02569b] text-white" },
-  React: { mark: "RE", className: "bg-[#087ea4] text-white" },
-  "Linux / Ubuntu": { mark: "LX", className: "bg-[#e95420] text-white" },
   "Server & Database Administration": { mark: "SD", className: "bg-[#334155] text-white" },
-  "Git / GitLab": { mark: "GIT", className: "bg-[#fc6d26] text-white" },
   "Data Center": { mark: "DC", className: "bg-[#0e7490] text-white" },
   Troubleshooting: { mark: "TS", className: "bg-[#57534e] text-white" },
-  "Integrasi Sistem (WSO2)": { mark: "IN", className: "bg-[#f26522] text-white" },
 };
 
 function SkillBadge({ skill }) {
