@@ -4,5 +4,17 @@ dist
 .DS_Store
 npm-debug.log*
 
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+
 .vercel
 tmp/
