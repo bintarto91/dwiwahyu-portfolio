@@ -238,11 +238,21 @@ export const education = [
 
 export const certifications = [
   {
+    name: "Intro to Data Analytics",
+    type: "Mini Course / Kursus Online",
+    issuer: "RevoU",
+    year: "2023",
+    duration: "2 minggu",
+    completionDate: "31 Maret 2023",
+    evidence: "Certificate of Completion",
+  },
+  {
     name: "Kelas Desain Canva Dari Dasar Hingga Mahir",
     type: "Kursus Online",
     issuer: "KursusDigital.id",
     year: "2023",
     completionDate: "25 Maret 2023",
+    evidence: "Sertifikat Penyelesaian Kelas",
     materials: "Penggunaan Canva, teknik desain, dan pembuatan konten visual",
   },
   {

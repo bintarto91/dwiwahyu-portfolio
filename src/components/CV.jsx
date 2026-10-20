@@ -193,7 +193,9 @@ export default function CV() {
                 <span className="inline-block rounded-full bg-sky-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sky-700">{cert.type}</span>
                 <h3 className="mt-2 font-semibold text-zinc-950">{cert.name}</h3>
                 <p className="mt-1 text-sm text-zinc-500">{cert.issuer}{cert.location ? ` · ${cert.location}` : ""} · {cert.year}</p>
+                {cert.duration && <p className="mt-1 text-xs text-zinc-500">Durasi: {cert.duration}</p>}
                 {cert.completionDate && <p className="mt-1 text-xs text-zinc-500">Selesai pada {cert.completionDate}</p>}
+                {cert.evidence && <p className="mt-1 text-xs text-zinc-500">Bukti: {cert.evidence}</p>}
                 {cert.materials && <p className="mt-2 text-sm leading-5 text-zinc-600">Materi: {cert.materials}</p>}
               </div>
             ))}
