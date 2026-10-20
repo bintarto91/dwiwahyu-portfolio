@@ -47,6 +47,12 @@ export default function Certifications() {
                     </div>
                     <h3 className="mt-6 font-display text-xl font-semibold leading-snug">{cert.name}</h3>
                     <p className="mt-3 text-sm leading-6 text-cream/65">{cert.issuer}{cert.location ? ` · ${cert.location}` : ""} · {cert.year}</p>
+                    {cert.completionDate && (
+                      <p className="mt-2 text-xs leading-5 text-cream/55">Selesai pada {cert.completionDate}</p>
+                    )}
+                    {cert.materials && (
+                      <p className="mt-3 border-t border-white/10 pt-3 text-sm leading-6 text-cream/70">Materi: {cert.materials}</p>
+                    )}
                   </article>
                 </Reveal>
               ))}

@@ -238,6 +238,14 @@ export const education = [
 
 export const certifications = [
   {
+    name: "Kelas Desain Canva Dari Dasar Hingga Mahir",
+    type: "Kursus Online",
+    issuer: "KursusDigital.id",
+    year: "2023",
+    completionDate: "25 Maret 2023",
+    materials: "Penggunaan Canva, teknik desain, dan pembuatan konten visual",
+  },
+  {
     name: "Pelatihan Android Tingkat Pemula",
     type: "Pelatihan",
     issuer: "Joftra Training Center",
