@@ -217,7 +217,7 @@ export const skillGroups = [
     skills: ["PHP", "Laravel", "CodeIgniter", "JavaScript", "Flutter"],
   },
   {
-    title: "Infrastructure & Integration",
+    title: "IT Infrastructure & Operations",
     emoji: "🖥️",
     skills: [
       "Server & Database Administration",
