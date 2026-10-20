@@ -238,24 +238,35 @@ export const education = [
 
 export const certifications = [
   {
-    name: "Seminar Data Analyst",
-    issuer: "Dari Data Menjadi Berdaya",
-    type: "Seminar",
-  },
-  {
-    name: "Android Development Training",
-    issuer: "Joftra Training Center",
+    name: "Pelatihan Android Tingkat Pemula",
     type: "Pelatihan",
+    issuer: "Joftra Training Center",
+    year: "2013",
   },
   {
     name: "Extra Large Workshop Merakit dan Instalasi PC",
-    issuer: "Universitas Komputer Indonesia",
     type: "Workshop",
+    issuer: "Universitas Komputer Indonesia",
+    year: "2012/2013",
   },
   {
     name: "Ready to Clouds Computing with Windows 8 and Office 365",
-    issuer: "Seminar Nasional Teknologi Informasi",
     type: "Seminar",
+    issuer: "Seminar Nasional Teknologi Informasi",
+    year: "2013",
+  },
+  {
+    name: "Seminar Android bersama Rully Hasibuan (Android Developer)",
+    type: "Seminar",
+    issuer: "Universitas Komputer Indonesia",
+    year: "2012",
+  },
+  {
+    name: "Pelatihan Komputer",
+    type: "Pelatihan",
+    issuer: "LPK Prima",
+    location: "SMAN 17 Bandung",
+    year: "2009",
   },
 ];
 

@@ -192,7 +192,7 @@ export default function CV() {
               <div key={cert.name} className="avoid-break rounded-lg border border-zinc-200 p-4">
                 <span className="inline-block rounded-full bg-sky-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sky-700">{cert.type}</span>
                 <h3 className="mt-2 font-semibold text-zinc-950">{cert.name}</h3>
-                <p className="mt-1 text-sm text-zinc-500">{cert.issuer}</p>
+                <p className="mt-1 text-sm text-zinc-500">{cert.issuer}{cert.location ? ` · ${cert.location}` : ""} · {cert.year}</p>
               </div>
             ))}
           </div>

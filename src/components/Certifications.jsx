@@ -35,14 +35,18 @@ export default function Certifications() {
             <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-orange">Pelatihan, Workshop &amp; Seminar</p>
             <div className="mt-5 grid gap-px overflow-hidden rounded-[1.75rem] bg-white/15 sm:grid-cols-2">
               {certifications.map((cert, index) => (
-                <Reveal key={cert.name} delay={index * 70} className="h-full">
+                <Reveal
+                  key={cert.name}
+                  delay={index * 70}
+                  className={`h-full ${certifications.length % 2 === 1 && index === certifications.length - 1 ? "sm:col-span-2" : ""}`}
+                >
                   <article className="flex h-full min-h-52 flex-col bg-ink p-6 transition hover:bg-white/[.05] sm:p-7">
                     <div className="flex items-start justify-between gap-4">
                       <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/15 font-mono text-[10px] font-bold text-lime" aria-hidden="true">0{index + 1}</span>
                       <span className="rounded-full border border-orange/40 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-orange">{cert.type}</span>
                     </div>
                     <h3 className="mt-6 font-display text-xl font-semibold leading-snug">{cert.name}</h3>
-                    <p className="mt-3 text-sm leading-6 text-cream/65">{cert.issuer}</p>
+                    <p className="mt-3 text-sm leading-6 text-cream/65">{cert.issuer}{cert.location ? ` · ${cert.location}` : ""} · {cert.year}</p>
                   </article>
                 </Reveal>
               ))}
