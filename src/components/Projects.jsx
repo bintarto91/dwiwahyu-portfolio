@@ -22,6 +22,32 @@ function LinkArrow() {
   return <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>;
 }
 
+function ErpLogisticsVisual() {
+  return (
+    <div className="absolute inset-0 overflow-hidden bg-[#173d3d] p-6 text-cream sm:p-10">
+      <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-lime/20 blur-3xl" />
+      <div className="absolute -bottom-20 -left-16 h-64 w-64 rounded-full bg-orange/20 blur-3xl" />
+      <div className="relative flex h-full flex-col justify-between">
+        <div className="flex items-center justify-between font-mono text-[10px] font-bold uppercase tracking-[.18em] text-cream/70">
+          <span>ERP Logistics</span>
+          <span>01—03</span>
+        </div>
+        <div>
+          <div className="flex h-24 w-24 items-center justify-center rounded-2xl border border-cream/25 bg-cream/10 shadow-xl backdrop-blur">
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M3 21V8l9-5 9 5v13M3 8l9 5 9-5M12 13v8M7 16h2M15 16h2" /></svg>
+          </div>
+          <p className="mt-6 font-display text-4xl font-semibold leading-none tracking-[-.05em] sm:text-5xl">Kawasan &amp;<br />Gudang Berikat</p>
+        </div>
+        <div className="grid grid-cols-3 gap-2 font-mono text-[9px] font-semibold uppercase tracking-wider text-cream/75 sm:gap-3">
+          <span className="rounded-lg border border-cream/20 bg-cream/10 px-3 py-2 text-center">Inventory</span>
+          <span className="rounded-lg border border-cream/20 bg-cream/10 px-3 py-2 text-center">Procurement</span>
+          <span className="rounded-lg border border-cream/20 bg-cream/10 px-3 py-2 text-center">Accounting</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="proyek" className="scroll-mt-20 bg-paper py-24 sm:py-32">
@@ -51,6 +77,8 @@ export default function Projects() {
                         );
                       })}
                     </div>
+                  ) : project.visual === "erp-logistics" ? (
+                    <ErpLogisticsVisual />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-[#dbe9e2] p-4 sm:p-6">
                       <img src={project.image} alt={`Tampilan proyek ${project.title}`} width={sizeOf(project.image)[0]} height={sizeOf(project.image)[1]} loading="lazy" decoding="async" className="max-h-full w-full rounded-xl object-contain shadow-xl transition duration-700 group-hover:scale-[1.02]" />

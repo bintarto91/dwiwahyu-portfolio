@@ -180,7 +180,8 @@ export const projects = [
     emoji: "🎨",
     demo: "#",
     repo: "#",
-    image: "/loccana-alur.webp",
+    visual: "erp-logistics",
+    image: "",
     featured: true,
   },
   {
