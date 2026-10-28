@@ -133,12 +133,12 @@ export default function Projects() {
             <h3 className="font-display text-2xl font-semibold">Proyek lainnya</h3>
             <span className="font-mono text-xs text-ink/55">{more.length} proyek</span>
           </div>
-          <div className="grid gap-px overflow-hidden rounded-2xl bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-px overflow-hidden rounded-2xl bg-ink/10 sm:grid-cols-2">
             {more.map((project, index) => (
               <article
                 key={project.title}
                 className={`flex min-h-72 flex-col bg-cream p-7 transition hover:bg-white ${
-                  more.length % 2 === 1 && index === more.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
+                  more.length % 2 === 1 && index === more.length - 1 ? "sm:col-span-2" : ""
                 }`}
               >
                 <div className="flex items-start justify-between"><span className="text-2xl">{project.emoji}</span><span className="font-mono text-[10px] uppercase tracking-wider text-ink/55">{project.category}</span></div>
