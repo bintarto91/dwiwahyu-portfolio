@@ -24,24 +24,41 @@ function LinkArrow() {
 
 function ErpLogisticsVisual() {
   return (
-    <div className="absolute inset-0 overflow-hidden bg-[#173d3d] p-6 text-cream sm:p-10">
-      <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-lime/20 blur-3xl" />
-      <div className="absolute -bottom-20 -left-16 h-64 w-64 rounded-full bg-orange/20 blur-3xl" />
-      <div className="relative flex h-full flex-col justify-between">
-        <div className="flex items-center justify-between font-mono text-[10px] font-bold uppercase tracking-[.18em] text-cream/70">
-          <span>ERP Logistics</span>
-          <span>01—03</span>
-        </div>
-        <div>
-          <div className="flex h-24 w-24 items-center justify-center rounded-2xl border border-cream/25 bg-cream/10 shadow-xl backdrop-blur">
-            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M3 21V8l9-5 9 5v13M3 8l9 5 9-5M12 13v8M7 16h2M15 16h2" /></svg>
+    <div className="absolute inset-0 bg-[#d6e6e0] p-4 sm:p-6">
+      <div className="flex h-full overflow-hidden rounded-xl bg-[#f8fbfa] text-[#173d3d] shadow-2xl">
+        <aside className="flex w-[30%] min-w-28 flex-col bg-[#173d3d] px-3 py-4 text-cream sm:w-[27%] sm:px-4">
+          <div className="flex items-center gap-2 border-b border-cream/15 pb-4">
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-lime text-[10px] font-black text-[#173d3d]">KB</span>
+            <span className="font-mono text-[9px] font-bold tracking-wide">ERP LOGISTIK</span>
           </div>
-          <p className="mt-6 font-display text-4xl font-semibold leading-none tracking-[-.05em] sm:text-5xl">Kawasan &amp;<br />Gudang Berikat</p>
-        </div>
-        <div className="grid grid-cols-3 gap-2 font-mono text-[9px] font-semibold uppercase tracking-wider text-cream/75 sm:gap-3">
-          <span className="rounded-lg border border-cream/20 bg-cream/10 px-3 py-2 text-center">Inventory</span>
-          <span className="rounded-lg border border-cream/20 bg-cream/10 px-3 py-2 text-center">Procurement</span>
-          <span className="rounded-lg border border-cream/20 bg-cream/10 px-3 py-2 text-center">Accounting</span>
+          <div className="mt-5 space-y-2 font-mono text-[8px] font-medium text-cream/65 sm:text-[9px]">
+            <p className="rounded-md bg-cream/15 px-2 py-1.5 text-cream">Dashboard</p>
+            <p className="px-2 py-1">Barang Masuk</p>
+            <p className="px-2 py-1">Mutasi Barang</p>
+            <p className="px-2 py-1">Gudang Berikat</p>
+            <p className="px-2 py-1">Dokumen Pabean</p>
+          </div>
+          <p className="mt-auto font-mono text-[7px] uppercase tracking-wider text-cream/40">Kawasan Berikat</p>
+        </aside>
+        <div className="min-w-0 flex-1 p-4 sm:p-5">
+          <div className="flex items-center justify-between border-b border-[#173d3d]/10 pb-3">
+            <div>
+              <p className="font-mono text-[8px] font-bold uppercase tracking-[.14em] text-[#173d3d]/50">Dashboard Operasional</p>
+              <p className="mt-1 text-sm font-bold sm:text-base">Kawasan &amp; Gudang Berikat</p>
+            </div>
+            <span className="rounded-full bg-lime/30 px-2 py-1 font-mono text-[7px] font-bold text-[#173d3d]">TERINTEGRASI</span>
+          </div>
+          <div className="mt-4 grid grid-cols-2 gap-2">
+            <div className="rounded-lg border border-[#173d3d]/10 bg-white p-2 sm:p-3"><p className="font-mono text-[7px] uppercase text-[#173d3d]/55">Barang Masuk</p><p className="mt-1 text-base font-bold sm:text-xl">126</p><p className="font-mono text-[7px] text-emerald-700">Bulan ini</p></div>
+            <div className="rounded-lg border border-[#173d3d]/10 bg-white p-2 sm:p-3"><p className="font-mono text-[7px] uppercase text-[#173d3d]/55">Stok Gudang</p><p className="mt-1 text-base font-bold sm:text-xl">2.480</p><p className="font-mono text-[7px] text-emerald-700">Terkelola</p></div>
+          </div>
+          <div className="mt-3 rounded-lg border border-[#173d3d]/10 bg-white p-3">
+            <div className="flex items-center justify-between"><p className="font-mono text-[8px] font-bold">STATUS DOKUMEN</p><span className="font-mono text-[7px] text-[#173d3d]/45">Hari ini</span></div>
+            <div className="mt-3 space-y-2">
+              <div className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /><span className="flex-1 font-mono text-[7px]">Penerimaan barang</span><span className="font-mono text-[7px] text-[#173d3d]/50">Selesai</span></div>
+              <div className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-orange" /><span className="flex-1 font-mono text-[7px]">Mutasi antar gudang</span><span className="font-mono text-[7px] text-[#173d3d]/50">Diproses</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -133,9 +150,6 @@ export default function Projects() {
                   {valid(project.repo) && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="hover:text-orange">Kode ↗</a>}
                 </div>
               </article>
-            ))}
-            {Array.from({ length: (3 - (more.length % 3)) % 3 }).map((_, index) => (
-              <div key={`filler-lg-${index}`} aria-hidden="true" className="hidden bg-cream lg:block" />
             ))}
           </div>
         </Reveal>
