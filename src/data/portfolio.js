@@ -44,7 +44,7 @@ export const navLinks = [
 export const stats = [
   { value: "11+", label: "Tahun Pengalaman IT" },
   { value: "3", label: "Perusahaan Tempat Berkarier" },
-  { value: "7", label: "Proyek & Sistem Dikerjakan" },
+  { value: "8", label: "Proyek & Sistem Dikerjakan" },
 ];
 
 // Riwayat karier, urut dari yang terbaru.
@@ -127,12 +127,12 @@ export const projects = [
     category: "Pribadi",
     title: "TNC Teleheart Nursing Care",
     description:
-      "Aplikasi pendamping perawatan jantung untuk mencatat tanda vital dan keluhan harian, memantau riwayat kondisi, serta mengakses edukasi dan konsultasi dengan tenaga kesehatan.",
+      "Aplikasi pendamping perawatan jantung berbasis PWA untuk mencatat tanda vital dan keluhan harian, memantau riwayat kondisi, serta mengakses edukasi dan konsultasi dengan tenaga kesehatan.",
     highlight: {
       label: "Fitur Utama",
       text: "Pemantauan tanda vital dan keluhan harian, riwayat pemantauan, edukasi, serta konsultasi dengan tenaga kesehatan.",
     },
-    tags: ["Flutter", "Mobile App", "Telehealth", "Health Monitoring"],
+    tags: ["Flutter", "PWA / Web App", "Telehealth", "Health Monitoring"],
     emoji: "❤️",
     demo: "#",
     repo: "#",
@@ -158,9 +158,10 @@ export const projects = [
   {
     category: "Pribadi",
     title: "Aplikasi Laundry",
+    role: "Dalam Pengembangan",
     description:
-      "Aplikasi manajemen layanan laundry yang mencakup pencatatan pesanan, pemantauan status cucian, dan pengelolaan data pelanggan.",
-    tags: ["Web App"],
+      "Aplikasi PWA yang sedang dikembangkan untuk mengelola pesanan, memantau status proses cucian, dan mengelola data pelanggan.",
+    tags: ["PWA / Web App", "Dalam Pengembangan"],
     emoji: "🧺",
     demo: "#",
     repo: "https://github.com/bintarto91/laundry",
@@ -168,14 +169,14 @@ export const projects = [
   },
   {
     category: "Perusahaan",
-    title: "Revamp Loccana",
+    title: "Aplikasi ERP Kawasan & Gudang Berikat",
     description:
-      "Proyek pengembangan dan modernisasi aplikasi distribusi serta inventori Loccana, dikerjakan bersama tim perusahaan. Mencakup modul master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting dengan Laravel, PostgreSQL, serta komponen integrasi WSO2.",
+      "Aplikasi ERP perusahaan untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat, termasuk perusahaan non-KB/GB, yang terintegrasi dengan bea cukai. Mencakup modul master data, administrasi, procurement, inventory, penjualan, cash bank, dan accounting.",
     highlight: {
       label: "Kontribusi Saya",
       text: "Analisis proses bisnis, pengelolaan dan perancangan database, koordinasi proyek, serta pengembangan aplikasi.",
     },
-    tags: ["Laravel", "PostgreSQL", "WSO2", "Distribusi", "Inventory"],
+    tags: ["Laravel", "PostgreSQL", "WSO2", "ERP", "Logistik"],
     emoji: "🎨",
     demo: "#",
     repo: "#",
@@ -183,12 +184,25 @@ export const projects = [
     featured: true,
   },
   {
-    category: "Perusahaan",
-    title: "Aplikasi ERP Kawasan & Gudang Berikat",
+    category: "Pribadi",
+    title: "Aplikasi Manufaktur",
+    role: "Dalam Pengembangan",
     description:
-      "Aplikasi berbasis ERP untuk pengelolaan barang di Kawasan Berikat dan Gudang Berikat (fasilitas kepabeanan), mencakup pula perusahaan non-KB/GB. Terintegrasi dengan bea cukai.",
-    tags: ["ERP", "Kawasan Berikat", "Logistik"],
+      "Aplikasi PWA yang sedang dikembangkan untuk mendukung pengelolaan proses dan operasional manufaktur.",
+    tags: ["PWA / Web App", "Manufaktur", "Dalam Pengembangan"],
     emoji: "🏢",
+    demo: "#",
+    repo: "#",
+    image: "",
+  },
+  {
+    category: "Pribadi",
+    title: "Aplikasi Toko Online",
+    role: "Dalam Pengembangan",
+    description:
+      "Aplikasi PWA yang sedang dikembangkan untuk mendukung pengelolaan katalog produk dan proses penjualan toko online.",
+    tags: ["PWA / Web App", "E-Commerce", "Dalam Pengembangan"],
+    emoji: "🛒",
     demo: "#",
     repo: "#",
     image: "",
